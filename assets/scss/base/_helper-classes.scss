@@ -1,0 +1,46 @@
+
+.text {
+    &--left {
+        text-align: left;
+    }
+    &--right {
+        text-align: right;
+    }
+    &--center {
+        text-align: center;
+    }
+    &--justify {
+        text-align: justify;
+    }
+}
+
+
+.float {
+    &--left {
+        float: left;
+    }
+    &--right {
+        float: right;
+    }
+}
+
+
+.display {
+    &--none {
+        display: none;
+    }
+    &--block {
+        display: block;
+    }
+    &--inline-block {
+        display: inline-block;
+    }
+    &--flex {
+        display: flex;
+    }
+}
+
+
+.clear {
+    @include clear;
+}

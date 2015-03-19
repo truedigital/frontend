@@ -1,0 +1,22 @@
+
+// IMAGES
+
+img {
+  border: 0;
+}
+
+
+// Helper Classes
+.image {
+    &--static {
+        width: auto;
+        height: auto;
+        max-width: auto;
+        max-height: auto;
+    }
+
+    &--expand {
+        width: 100%;
+        max-width: auto;
+    }
+}

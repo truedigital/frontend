@@ -1,0 +1,43 @@
+.heading {
+    margin: $base-line-height 0;
+
+    // font-family: $font--adelle;
+    font-weight: normal;
+    @include font-size(32,42);
+
+
+    %heading--x-large,
+    &--xlarge {
+        @include font-size(36, 46);
+        // font-family: $font--adelle;
+        font-weight: bold;
+    }
+
+    &--large {
+        @include font-size(32,42);
+        // font-family: $font--adelle;
+        font-weight: bold;
+    }
+
+    %heading--small,
+    &--small {
+        @include font-size(18,24);
+        // font-family: $font--opensans;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: $base-line-height 0 $base-line-height/2;
+    }
+
+    @include mq($from: tablet-small){
+        &--xlarge {
+            @include font-size(80,95);
+            // font-family: $font--adelle;
+            font-weight: bold;
+        }
+
+        &--large {
+            @include font-size(60,75);
+        }
+    }
+
+}

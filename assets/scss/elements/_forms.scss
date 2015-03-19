@@ -1,0 +1,192 @@
+
+// === FORM INPUT MIXIN
+
+@mixin basic-form-element {
+    @include font-size(15,17);
+    background: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    box-shadow: inset 1px 1px 0 0 #eee;
+    font-family: $base-font;
+    padding: 5px 14px;
+    transition: all 250ms;
+    transition-property: color, background, border-color;
+}
+
+@mixin form-element {
+    @include basic-form-element;
+    padding: 5px 14px;
+    height: 40px;
+    width: 100%;
+
+    -webkit-appearance: none;
+
+    &:focus {
+        box-shadow: inset -1px -1px 0 0 #eee;
+        outline-color: transparent;
+        outline-style: none;
+        border-color: #999;
+    }
+
+    @include placeholder {
+        color: #999;
+        font-family: $base-font;
+    }
+
+    .form--inline & {
+        width: auto;
+    }
+}
+
+
+
+
+
+// === FORM ELEMENTS
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    @include form-element;
+
+}
+
+select {
+    @include basic-form-element;
+}
+
+input[type="search"]{
+    border-radius: 0;
+}
+
+textarea {
+    min-height: 100px;
+    vertical-align: bottom;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.form-field {
+    margin-bottom: 30px;
+    display: block;
+    @include clear;
+}
+
+.label--field {
+    display: block;
+    margin-bottom: 5px;
+
+    .form--inline & {
+        float: left;
+        width: 200px;
+    }
+}
+
+.label--inline {
+    display: inline-block;
+}
+
+
+.checkbox,
+.radio {
+    margin-right: 20px;
+
+    &--block {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+// === CUSTOM SELECT
+.custom-select {
+    position: relative;
+    overflow: hidden;
+
+    & select {
+        position: absolute;
+        top: 0;
+        left: 1px;
+        padding: 0;
+        opacity: 0.001;
+    }
+
+    & select,
+    & .btn-select {
+        background: #fff;
+        width: 100%;
+        min-width: 110px;
+        height: 40px;
+        padding-right: 50px;
+        @include basic-form-element;
+
+        .form--inline & {
+            max-width: 300px;
+        }
+
+        &.btn-focus {
+            //border-color: palette(grey);
+        }
+    }
+
+
+    & .btn-select {
+        position: relative;
+        display: inline-block;
+        @extend %base-form-element;
+        padding-top: 12px;
+
+        &:after {
+            content: '';
+            @include triangle (14px, #fff, down);
+            position: absolute;
+            top: 50%;
+            right: 11px;
+            margin-top: -3px;
+            filter: drop-shadow(2px 2px 1px rgba(0,0,0,.2));
+        }
+
+        &:before {
+            content: " ";
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            background-color: #ccc;
+        }
+
+
+
+    }
+
+    & .label-text {
+        padding: 0 1em .3em 0;
+    }
+}
+
+
+.form-field--inline-selects {
+    & .custom-select {
+        display: inline-block;
+        width: auto;
+        padding-right: 10px;
+    }
+}
+
+

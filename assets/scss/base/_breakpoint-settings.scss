@@ -1,0 +1,17 @@
+// === BREAKPOINT SETTINGS
+// Mixin: sass-mq
+// Docs: https://github.com/guardian/sass-mq
+//
+
+
+$mq-breakpoints: (
+    mobile:  320px,
+    mobile-large: 480px,
+    tablet-small: 740px,
+    tablet:  980px,
+    desktop: 1030px,
+    wide:    1300px
+);
+
+// Breakpoints in list will be displayed top right
+$mq-show-breakpoints: (mobile, mobile-large, tablet-small, tablet, desktop, wide);

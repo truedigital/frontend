@@ -1,0 +1,8 @@
+
+@mixin circle($size, $color: inherit) {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $color;
+}

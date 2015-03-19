@@ -1,0 +1,140 @@
+
+// ==== GRID SYSTEM
+//  Our grid system uses Susy v2.
+//  Docs: http://susydocs.oddbird.net
+
+
+
+// === GRID CONTAINER
+// This should contain the entire layout
+
+.grid {
+    @include container();
+    position: relative;
+    padding: 0 20px;
+
+    // Grid Debugging
+    .grid--debug & {
+        @include show-grid(background);
+    }
+}
+
+
+
+// === GRID ROW
+// Container for a row of elements
+
+//[data-grid-row],
+//.grid--row,
+[data-row] {
+    @include clear;
+    margin-bottom: $vertical-spacing / 2;
+    padding-bottom: $vertical-spacing / 2;
+
+    & > * {
+        margin-bottom: $vertical-spacing / 2;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+// === GRID ELEMENTS
+// Sets individual items to grid
+
+@include mq(tablet-small){
+    // QUARTER
+    [data-columns~="1/4"] {
+        @include span(3);
+
+        // & + & + & + & // quarter | quarter | quarter | quarter
+        // {
+        //     @include last;
+        // }
+    }
+
+
+    // THIRD
+    [data-columns~="1/3"] {
+        @include span(4);
+
+        // & + & + & // third | third | third
+        // {
+        //     @include last;
+        // }
+    }
+
+
+    // HALF
+    [data-columns~="1/2"] {
+        @include span(6);
+
+        // & + &, // half | half
+        // & + [data-columns] + [data-columns], // half | quarter | quarter
+        // [data-columns] + & + [data-columns], // quarter | half | quarter
+        // [data-columns] + [data-columns] + & // quarter | quarter | half
+        // {
+        //     @include last;
+        // }
+    }
+
+
+    // TWO THIRDS
+    [data-columns~="2/3"] {
+        @include span(8);
+
+        // & + [data-columns], // two-third | third
+        // [data-columns] + &  // third | two-third
+        // {
+        //     @include last;
+        // }
+    }
+
+
+    // THREE QUARTERS
+    [data-columns~="3/4"] {
+        @include span(9);
+
+        // & + [data-columns], // three-quarter | quarter
+        // [data-columns] + & // quarter | three-quarter
+        // {
+        //     @include last;
+        // }
+    }
+
+
+    // FULL
+    [data-columns~="full"] {
+        @include full;
+    }
+
+
+    // LAST
+    [data-columns~="last"]{
+        @include last;
+    }
+
+    [data-columns~="container"]{
+        @include clear;
+        float: none !important;
+        margin: 0 !important;
+    }
+
+    // === AUTO GRID
+    // Generates [data-grid]'s for 2 - 6 elements / row
+    // @for $i from 2 through 6 {
+    //     [data-grid="#{$i}"] {
+    //         & > * {
+    //             @include span((12 / $i));
+    //             &:nth-child(#{$i}n){ @include last;}
+    //         }
+    //     }
+    // }
+}
+
+
+
+

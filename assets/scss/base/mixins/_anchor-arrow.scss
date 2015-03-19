@@ -1,0 +1,23 @@
+
+// === TEXT ANCHOR ARROWS
+// Default is standard sized right facing arrow
+
+@mixin anchor-arrow($size: 13, $direction: right, $margin: null){
+    $opposite: opposite-position($direction);
+
+    @if not unitless($size) { $size: strip-units($size); }
+    $size: round($size * 1.29);
+
+    $arrow: if($direction == right, ">", "<");
+    $psuedo: if($direction == right, ":after", ":before");
+
+    &#{$psuedo} {
+        margin-#{$opposite}: round($size * 0.28) +px;
+        font-size: $size +px;
+        content: $arrow;
+        color: palette(grey);
+        font-weight: normal;
+        font-family: monospace;
+    }
+}
+

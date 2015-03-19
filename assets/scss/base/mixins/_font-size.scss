@@ -1,0 +1,30 @@
+@mixin font-size($font-size, $line-height: null) {
+    @if not unitless($font-size) {
+        $font-size: strip-units($font-size);
+    }
+    $x-base-font-size: $base-font-size;
+    @if not unitless($base-font-size) {
+        $x-base-font-size: strip-units($base-font-size);
+    }
+    font-size: $font-size + px;
+    font-size: $font-size / $x-base-font-size * 1rem;
+    @if $line-height {
+        @if not unitless($line-height) {
+            $line-height: strip-units($line-height);
+        }
+        line-height: $line-height + px;
+        line-height: $line-height / $x-base-font-size * 1rem;
+    }
+}
+
+@mixin line-height($line-height) {
+    @if not unitless($line-height) {
+        $line-height: strip-units($line-height);
+    }
+    $x-base-font-size: $base-font-size;
+    @if not unitless($base-font-size) {
+        $x-base-font-size: strip-units($base-font-size);
+    }
+    line-height: $line-height + px;
+    line-height: $line-height / $x-base-font-size * 1rem;
+}

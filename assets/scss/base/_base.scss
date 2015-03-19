@@ -1,0 +1,18 @@
+
+// ==== BASE
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    min-width: 320px;
+}
+

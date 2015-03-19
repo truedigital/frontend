@@ -1,0 +1,46 @@
+
+@mixin list-unstyled($margin: true) {
+    list-style-type: none;
+    padding-left: 0;
+    @if $margin == false {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@mixin list-inline($spacing: false, $margin: true) {
+    @include list-unstyled($margin);
+    & > li {
+        display: inline-block;
+    }
+    @if $spacing {
+        & > li + li {
+            margin-left: $spacing;
+        }
+    }
+}
+
+@mixin list-float($space: false, $dir: left, $margin: true) {
+    @include list-unstyled($margin);
+    @include clearfix;
+    & > li {
+        float: $dir;
+    }
+    @if $space {
+        & > li + li {
+            margin-#{$dir}: $space;
+        }
+    }
+}
+
+@mixin list-divided($divider: "|", $space: 0.5em, $dir: left, $height: false, $margin: true) {
+    @include list-float($dir: $dir, $margin: $margin);
+    $pseudo: if($dir == left, "before", "after");
+    & > li + li:#{$pseudo} {
+        content: $divider;
+        display: inline-block;
+        @content;
+        margin-left: $space;
+        margin-right: $space;
+    }
+}

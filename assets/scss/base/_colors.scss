@@ -1,0 +1,31 @@
+
+// Color Palettes
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+$palettes: (
+    green: (
+        base: #506600,
+        light: #eaf6bf,
+        gradient-d: #4b6004,
+        gradient-l: #8a9c46
+    ),
+    yellow: (
+        base: #fdf4a6,
+        bright: #ffe957,
+        light: #fff9d5
+    ),
+    grey: (
+        base: #3a3934,
+        light: #f3f3f3
+    ),
+    pink: (
+        base: #f399b5
+    ),
+    orange: (
+        base: #f19d27
+    )
+
+);

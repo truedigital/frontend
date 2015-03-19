@@ -1,0 +1,15 @@
+
+// --- USAGE
+
+// @include font-face(Lato, "../fonts/lato/lato-reg-webfont", normal, normal);
+//
+// $font--lato: 'Lato';
+//
+// $base-font: $font--lato; // This is used for body and form elements
+//
+
+$base-font: 'Arial';
+
+body {
+    font-family: $base-font;
+}

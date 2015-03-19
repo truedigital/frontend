@@ -1,0 +1,9 @@
+# Node Modules
+node_modules/
+
+# Generated Files
+assets/html/*
+assets/js/*.js
+assets/js/*.min.js
+assets/css/*.css
+assets/css/*.css.map
