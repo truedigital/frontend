@@ -192,7 +192,10 @@ gulp.task('templates', function() {
 //==============================================================================
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: localHost,
+        server: {
+            baseDir: './',
+            directory: true
+        },
         open: false
     });
 });
