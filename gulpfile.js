@@ -10,6 +10,9 @@ var gulpif = require('gulp-if');
 var size = require('gulp-size');
 var header = require('gulp-header');
 
+// === IMAGE COMPRESSION
+var imagemin = require('gulp-imagemin');
+
 // === BROWSER SYNC
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
@@ -22,6 +25,7 @@ var minifycss = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var fileinclude = require('gulp-file-include');
+var modernizr = require('gulp-modernizr');
 var svgSprite = require('gulp-svg-sprites');
 
 
@@ -35,21 +39,26 @@ var paths = {
     css:        path.join(_baseDir, 'css'),
     scss:       path.join(_baseDir, 'scss'),
     js:         path.join(_baseDir, 'js'),
+    jsPartials: path.join(_baseDir, 'js/partials'),
+    jsVendor:   path.join(_baseDir, 'js/vendor'),
     scripts:    path.join(_baseDir, 'js/scripts'),
-    utils:      path.join(_baseDir, 'js/utils'),
     svg:        path.join(_baseDir, 'svg'),
     templates:  path.join(_baseDir, 'templates'),
-    html:       path.join(_baseDir, 'html')
+    html:       path.join(_baseDir, 'html'),
+    imageSrc:   path.join(_baseDir, 'images/src'),
+    imageDist:  path.join(_baseDir, 'images/dist'),
 }
 
 var files = {
     scss:       path.join(paths.scss, '**/*.scss'),
     css:        path.join(paths.css, '*.css'),
-    scripts:    path.join(paths.scripts, '*.js'),
-    utils:      [path.join(paths.utils, '*.js'), '!'+path.join(paths.utils, '*.min.js')],
+    jsPartials: path.join(paths.jsPartials, '*.js'),
+    scripts:    [path.join(paths.scripts, '*.js'), '!'+path.join(paths.scripts, '*.min.js')],
     svg:        path.join(paths.svg, 'icons/*.svg'),
     templates:  path.join(paths.templates, '*.tpl'),
-    partials:   path.join(paths.templates, '**/*')
+    partials:   path.join(paths.templates, '**/*'),
+    imageSrc:   path.join(paths.imageSrc, '**/**.**'),
+    allFiles:   path.join(_baseDir, '**/**.**'),
 };
 
 
@@ -131,7 +140,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function () {
     browserSync.notify('Running scripts');
 
-    return gulp.src(files.scripts)
+    return gulp.src(files.jsPartials)
         .pipe(sourcemaps.init())
         .pipe(concat('scripts.js'))
         .on('error', handleError)
@@ -146,6 +155,45 @@ gulp.task('scripts', function () {
 
 });
 
+
+
+
+// MODERNIZR
+//==============================================================================
+
+gulp.task('modernizr', function() {
+
+  var modernizrFilter = filter(['**/**', '!**/*.css', '!**/js/*.js', '!**/vendor/*.js']);
+
+  gulp.src(files.allFiles)
+    .pipe(modernizrFilter)
+    .pipe(modernizr('modernizr-custom.js', {
+      "options" : [
+        "setClasses",
+        "addTest",
+        "html5shiv",
+        "testProp",
+        "fnBind"
+      ]
+    }))
+    // .pipe(uglify())
+    .pipe(gulp.dest(paths.jsVendor))
+
+});
+
+
+
+
+// IMAGE COMPRESSION
+//==============================================================================
+gulp.task('img-compress', function() {
+
+    return gulp.src(files.imageSrc)
+        .pipe(imagemin({
+            progressive: true
+        }))
+        .pipe(gulp.dest(paths.imageDist));
+});
 
 
 
@@ -224,6 +272,10 @@ gulp.task('default', function () {
     gulp.start('styles', 'scripts', 'templates');
 });
 
+gulp.task('build' , function () {
+    gulp.start('modernizr', 'img-compress');
+});
+
 gulp.task('watch', ['default', 'browser-sync'], function () {
     watchFiles();
 });
@@ -235,7 +287,7 @@ gulp.task('watch-templates', ['default', 'browser-sync-templates'], function () 
 
 function watchFiles(){
     gulp.watch(files.scss, ['styles']);
-    gulp.watch(files.scripts, ['scripts']);
+    gulp.watch(files.jsPartials, ['scripts']);
     gulp.watch(files.templates, ['templates', browserSync.reload]);
     gulp.watch(files.partials, ['templates', browserSync.reload]);
     gulp.watch(files.svg, ['sprites', browserSync.reload]);
