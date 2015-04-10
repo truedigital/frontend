@@ -37,6 +37,8 @@ module.exports =
 
     to: {
 
+        allFiles: _baseDir + '/**/**.**';
+
         css: {
             source: _baseDir + '/css',
             files: _baseDir + '/css/*.css',
