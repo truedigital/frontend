@@ -1,74 +1,37 @@
-
-var argv = require('yargs').argv;
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var rename = require('gulp-rename');
-var replace = require('gulp-replace');
-var path = require('path');
-var filter = require('gulp-filter');
-var gulpif = require('gulp-if');
-var size = require('gulp-size');
-var header = require('gulp-header');
-
-// === IMAGE COMPRESSION
-var imagemin = require('gulp-imagemin');
-
-// === BROWSER SYNC
-var browserSync = require('browser-sync');
-var reload      = browserSync.reload;
-
-// === UTILITIES
-var sourcemaps = require('gulp-sourcemaps');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var minifycss = require('gulp-minify-css');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var fileinclude = require('gulp-file-include');
-var modernizr = require('gulp-modernizr');
-var svgSprite = require('gulp-svg-sprites');
-
-
-
-
-// === PATHS
+// === GULP MAGIC
 // ============================================================================
-var _baseDir  = './assets';
+var argv = require('yargs').argv,
+    gulp = require('gulp'),
+    gutil = require('gulp-util');
 
-var paths = {
-    css:        path.join(_baseDir, 'css'),
-    scss:       path.join(_baseDir, 'scss'),
-    js:         path.join(_baseDir, 'js'),
-    jsPartials: path.join(_baseDir, 'js/partials'),
-    jsVendor:   path.join(_baseDir, 'js/vendor'),
-    scripts:    path.join(_baseDir, 'js/scripts'),
-    svg:        path.join(_baseDir, 'svg'),
-    templates:  path.join(_baseDir, 'templates'),
-    html:       path.join(_baseDir, 'html'),
-    imageSrc:   path.join(_baseDir, 'images/src'),
-    imageDist:  path.join(_baseDir, 'images/dist'),
-}
+// BROWSER SYNC
+var browserSync = require('browser-sync'),
+    reload      = browserSync.reload;
 
-var files = {
-    scss:       path.join(paths.scss, '**/*.scss'),
-    css:        path.join(paths.css, '*.css'),
-    jsPartials: path.join(paths.jsPartials, '*.js'),
-    scripts:    [path.join(paths.scripts, '*.js'), '!'+path.join(paths.scripts, '*.min.js')],
-    svg:        path.join(paths.svg, 'icons/*.svg'),
-    templates:  path.join(paths.templates, '*.tpl'),
-    partials:   path.join(paths.templates, '**/*'),
-    imageSrc:   path.join(paths.imageSrc, '**/**.**'),
-    allFiles:   path.join(_baseDir, '**/**.**'),
-};
+// LOAD PLUGINS
+var plugins = require("gulp-load-plugins")({
+    pattern: ['gulp-*', 'gulp.*'],
+    replaceString: /\bgulp[\-.]/
+});
+
+// ENV SETTINGS
 
 
+var config = require('./gulp/settings/config'),
+    path = require('./gulp/settings/paths');
+
+// var env = require('./gulp/settings/config').production
+
+// if ( gutil.env.dev === true ) {
+//     env = require('./gulp/settings/config').development
+// }
 
 // === ERROR HANDLING
 // ============================================================================
 function formatError(err) {
     console.log(err);
     var errorString = '[' + err.plugin + ']';
-    errorString += ' ' + err.message.replace("\n",'');
+    errorString += ' ' + err.message.plugins.replace("\n",'');
     if(err.fileName)
         errorString += ' in ' + err.fileName;
     if(err.lineNumber)
@@ -85,53 +48,9 @@ function handleError(err) {
 
 
 
-// STYLES
-//==============================================================================
-// Note: Sourcemaps are not working at the moment when used with auto prefixer.
-// If you comment in sourcemaps and comment out autoprefixer. maps work fine.
-// I think autoprefixer wins over sourcemaps, so it's being used by default.
+require('./gulp/tasks/styles')(gulp, gutil, path, plugins);
 
-gulp.task('styles', function() {
-    return gulp.src(path.join(paths.scss, 'style.scss'))
-
-        // init sourcemaps
-        .pipe(sourcemaps.init({debug: true}))
-
-        // compile scss
-        .pipe(sass({
-            sourceComments : 'normal', // none|normal|map
-            includePaths : ['scss'],
-            errLogToConsole : true
-        }))
-        .on('error', handleError)
-
-        // .pipe(sourcemaps.write())
-        // .pipe(sourcemaps.init({loadMaps:true}))
-
-        // auto prefixing
-        .pipe(autoprefixer())
-        .on('error', handleError)
-
-        // update sourcemaps
-        // .pipe(sourcemaps.write('.'))
-
-        // save to file
-        .pipe(gulp.dest(paths.css))
-
-        // Trigger browsersync update
-        .pipe(filter('**/*.css'), browserSync.reload({stream:true}))
-
-
-
-        // Minify
-        .pipe(minifycss())
-        .pipe(rename('style.min.css'))
-        .pipe(gulp.dest(paths.css))
-        .pipe(size({ showFiles: false, gzip: true, title: 'STYLES'}))
-
-});
-
-
+// process.exit(1);
 
 
 // JAVASCRIPT
@@ -140,17 +59,17 @@ gulp.task('styles', function() {
 gulp.task('scripts', function () {
     browserSync.notify('Running scripts');
 
-    return gulp.src(files.jsPartials)
-        .pipe(sourcemaps.init())
-        .pipe(concat('scripts.js'))
+    return gulp.src(path.to.js.partials + '/*.js')
+        .pipe(plugins.sourcemaps.init())
+        .pipe(plugins.concat('scripts.js'))
         .on('error', handleError)
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.js))
+        .pipe(plugins.sourcemaps.write())
+        .pipe(gulp.dest(path.to.js.source))
 
-        .pipe(uglify({ preserveComments: 'some' }))
+        .pipe( isProduction ? plugins.uglify({ preserveComments: 'some' }) : gutil.noop() )
         .on('error', handleError)
-        .pipe(rename('scripts.min.js'))
-        .pipe(gulp.dest(paths.js))
+        .pipe( isProduction ? plugins.rename('scripts.min.js') : gutil.noop() )
+        .pipe( isProduction ? gulp.dest(path.to.js.source) : gutil.noop() )
         .pipe(browserSync.reload({stream:true, once: true}))
 
 });
@@ -161,59 +80,45 @@ gulp.task('scripts', function () {
 // MODERNIZR
 //==============================================================================
 
-gulp.task('modernizr', function() {
+// gulp.task('modernizr', function() {
 
-  var modernizrFilter = filter(['**/**', '!**/*.css', '!**/js/*.js', '!**/vendor/*.js']);
+//   var modernizrFilter = plugins.filter(['**/**', '!**/*.css', '!**/js/*.js', '!**/vendor/*.js']);
 
-  gulp.src(files.allFiles)
-    .pipe(modernizrFilter)
-    .pipe(modernizr('modernizr-custom.js', {
-      "options" : [
-        "setClasses",
-        "addTest",
-        "html5shiv",
-        "testProp",
-        "fnBind"
-      ]
-    }))
-    // .pipe(uglify())
-    .pipe(gulp.dest(paths.jsVendor))
+//   gulp.src(files.allFiles)
+//     .pipe(modernizrFilter)
+//     .pipe(plugins.modernizr('modernizr-custom.js', {
+//       "options" : [
+//         "setClasses",
+//         "addTest",
+//         "html5shiv",
+//         "testProp",
+//         "fnBind"
+//       ]
+//     }))
+//     // .pipe(plugins.uglify())
+//     .pipe(gulp.dest(paths.jsVendor))
 
-});
-
-
-
-
-// IMAGE COMPRESSION
-//==============================================================================
-gulp.task('img-compress', function() {
-
-    return gulp.src(files.imageSrc)
-        .pipe(imagemin({
-            progressive: true
-        }))
-        .pipe(gulp.dest(paths.imageDist));
-});
+// });
 
 
 
 // SVG ICONS
 //==============================================================================
-gulp.task('sprites', function () {
+// gulp.task('sprites', function () {
 
-    browserSync.notify('Running svg sprites');
+//     browserSync.notify('Running svg sprites');
 
-    return gulp.src(files.svg)
-        .pipe(svgSprite({
-            svgId: "svg-%f",
-            mode: "symbols",
-            cssFile: path.join(_baseDir, 'scss/_sprite.scss'),
-            svg: {
-                symbols: "symbols.svg"
-            }
-        }))
-        .pipe(gulp.dest(paths.svg));
-});
+//     return gulp.src(files.svg)
+//         .pipe(plugins.svgSprite({
+//             svgId: "svg-%f",
+//             mode: "symbols",
+//             cssFile: path.join(_baseDir, 'scss/_sprite.scss'),
+//             svg: {
+//                 symbols: "symbols.svg"
+//             }
+//         }))
+//         .pipe(gulp.dest(paths.svg));
+// });
 
 
 
@@ -222,13 +127,13 @@ gulp.task('sprites', function () {
 // TEMPLATES
 //==============================================================================
 gulp.task('templates', function() {
-    return gulp.src(files.templates)
-        .pipe(fileinclude({
+    return gulp.src(path.to.templates.files)
+        .pipe(plugins.fileInclude({
             prefix: '@@',
             basepath: '@file'
         })).on('error', handleError)
-        .pipe(rename({ extname: '.html' }))
-        .pipe(gulp.dest(paths.html));
+        .pipe(plugins.rename({ extname: '.html' }))
+        .pipe(gulp.dest(path.to.templates.destination));
         browserSync.reload();
         browserSync.notify('Template updated');
 });
@@ -286,10 +191,10 @@ gulp.task('watch-templates', ['default', 'browser-sync-templates'], function () 
 
 
 function watchFiles(){
-    gulp.watch(files.scss, ['styles']);
-    gulp.watch(files.jsPartials, ['scripts']);
-    gulp.watch(files.templates, ['templates', browserSync.reload]);
-    gulp.watch(files.partials, ['templates', browserSync.reload]);
-    gulp.watch(files.svg, ['sprites', browserSync.reload]);
+    gulp.watch(path.to.scss.files, ['styles']);
+    gulp.watch(path.to.js.partials, ['scripts']);
+    gulp.watch(path.to.templates.files, ['templates', browserSync.reload]);
+    gulp.watch(path.to.templates.partials, ['templates', browserSync.reload]);
+    // gulp.watch(files.svg, ['sprites', browserSync.reload]);
 }
 
