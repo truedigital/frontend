@@ -24,8 +24,6 @@ require('./gulp/tasks/browser-sync')(gulp, browserSync);
 require('./gulp/tasks/sprites')(gulp, plugins, browserSync);
 require('./gulp/tasks/modernizr')(gulp, plugins, browserSync);
 
-// process.exit(1);
-
 // GULP
 //==============================================================================
 
