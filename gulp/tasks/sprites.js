@@ -11,7 +11,7 @@ module.exports = function(gulp, plugins, browserSync){
         browserSync.notify('Running svg sprites');
 
         return gulp.src(path.to.svg.files)
-            .pipe(plugins.svgSprite({
+            .pipe(plugins.svgSprites({
                 svgId: "svg-%f",
                 mode: "symbols",
                 cssFile: path.to.scss.source + '/_sprite.scss',
