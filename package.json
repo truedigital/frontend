@@ -1,7 +1,7 @@
 {
   "name": "Tru",
-  "version": "0.0.2",
-  "description": "Gulp and dependencies",
+  "version": "0.0.1",
+  "description": "Front end build system maintained by the front end team at True Digital",
   "private": true,
   "devDependencies": {
     "browser-sync": "^2.0",
