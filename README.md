@@ -31,28 +31,28 @@
 
 ```
 XXXXX/
-â”œâ”€â”€ assets/
-â”‚   â”œâ”€â”€ css/
-â”‚   â”œâ”€â”€ fonts/
-â”‚   â”œâ”€â”€ html/
-â”‚   â”œâ”€â”€ images/
-â”‚   â”œâ”€â”€ js/
-â”‚   â”œâ”€â”€ scss/
-â”‚   â”œâ”€â”€ svg/
-â”‚   â””â”€â”€ templates/
-â”œâ”€â”€ gulp/
-â”‚   â”œâ”€â”€ settings/
-â”‚       â”œâ”€â”€ config.js
-â”‚       â”œâ”€â”€ error-handler.js
-â”‚       â””â”€â”€ paths.js
-â”‚   â”œâ”€â”€ tasks/
-â”‚       â”œâ”€â”€ browser-sync.js
-â”‚       â”œâ”€â”€ modernizr.js
-â”‚       â”œâ”€â”€ sprites.js
-â”‚       â”œâ”€â”€ styles.js
-â”‚       â””â”€â”€ templates.js
-â”œâ”€â”€ gulpfile.js
-â””â”€â”€ package.json
+├── assets/
+│   ├── css/
+│   ├── fonts/
+│   ├── html/
+│   ├── images/
+│   ├── js/
+│   ├── scss/
+│   ├── svg/
+│   └── templates/
+├── gulp/
+│   ├── settings/
+│       ├── config.js
+│       ├── error-handler.js
+│       └── paths.js
+│   ├── tasks/
+│       ├── browser-sync.js
+│       ├── modernizr.js
+│       ├── sprites.js
+│       ├── styles.js
+│       └── templates.js
+├── gulpfile.js
+└── package.json
 ```
 
 Heres a quick breakdown of what the heck everything does:
@@ -62,18 +62,18 @@ Heres a quick breakdown of what the heck everything does:
 Note: All files should be saved as partials:  `_module-style.scss`
 
 ```
-â”œâ”€â”€ scss/
-â”‚   â”œâ”€â”€ base/
-â”‚       â”œâ”€â”€ dev/
-â”‚       â”œâ”€â”€ functions/
-â”‚       â”œâ”€â”€ mixins/
-â”‚       â”œâ”€â”€ normalize/
-â”‚       â””â”€â”€ susy/
-â”‚   â”œâ”€â”€ elements/
-â”‚   â”œâ”€â”€ modules/
-â”‚       â””â”€â”€ addons/
-â”‚   â”œâ”€â”€ vendor/
-â”‚   â””â”€â”€ style.scss
+├── scss/
+│   ├── base/
+│       ├── dev/
+│       ├── functions/
+│       ├── mixins/
+│       ├── normalize/
+│       └── susy/
+│   ├── elements/
+│   ├── modules/
+│       └── addons/
+│   ├── vendor/
+│   └── style.scss
 ```
 
 - `base` : Defaults for your project and styling for top-level, unclassed elements and typography
@@ -115,10 +115,10 @@ The best place to start is styles.scss. You can see what files are included, the
 #### Javascript
 
 ```
-â”œâ”€â”€ js/
-â”‚   â”œâ”€â”€ partials/
-â”‚   â”œâ”€â”€ scripts/
-â”‚   â””â”€â”€ vendor/
+├── js/
+│   ├── partials/
+│   ├── scripts/
+│   └── vendor/
 ```
 - `partials` : You should populate this folder with all of your site specific custom scripts. If you have a plugin that is needed across multiple pages, then its recommended that you put it here and let it get compiled. Files are compiled alphabetically, so its quite simple to change the order if you need to.
 
