@@ -12,7 +12,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
         error = require('../settings/error-handler');
 
     if ( gutil.env.dev === true ) {
-        env = require('./gulp/settings/config').environment.development
+        env = require('../settings/config').environment.development
     }
 
     gulp.task('styles', function() {
@@ -51,7 +51,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
             .pipe(env.local ? plugins.minifyCss() : gutil.noop() )
             .pipe(env.local ? plugins.rename('style.min.css') : gutil.noop() )
             .pipe(env.local ? gulp.dest(path.to.css.source) : gutil.noop() )
-            .pipe(plugins.size({ showFiles: false, gzip: true, title: 'STYLES'}))
+            .pipe(plugins.size({ showFiles: false, gzip: true, title: env.name + ' styles'}))
 
     });
 

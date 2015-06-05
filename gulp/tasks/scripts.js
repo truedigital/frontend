@@ -8,7 +8,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
         error = require('../settings/error-handler');
 
     if ( gutil.env.dev === true ) {
-        env = require('./gulp/settings/config').environment.development
+        env = require('../settings/config').environment.development
     }
 
     gulp.task('scripts', function () {
