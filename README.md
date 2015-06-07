@@ -48,6 +48,7 @@ XXXXX/
 │   ├── tasks/
 │       ├── browser-sync.js
 │       ├── modernizr.js
+│       ├── scripts.js
 │       ├── sprites.js
 │       ├── styles.js
 │       └── templates.js
