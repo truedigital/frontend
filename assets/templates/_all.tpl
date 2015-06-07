@@ -58,7 +58,27 @@
 
 
 <body>
-@@include('../svg/symbols.svg')
+@@include('../svg/svg-symbols.svg')
+
+    <svg role="img" class="icon--checkmark">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#checkmark"></use>
+    </svg>
+
+    <svg role="img" class="icon--checkmark">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use>
+    </svg>
+
+    <svg role="img" class="icon--checkmark">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#googleplus"></use>
+    </svg>
+
+    <svg role="img" class="icon--checkmark">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use>
+    </svg>
+
+    <svg role="img" class="icon--checkmark">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+    </svg>
 
     <!--- MAIN SITE CONTENT -->
     <main class="site grid">

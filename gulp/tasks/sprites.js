@@ -11,15 +11,15 @@ module.exports = function(gulp, plugins, browserSync){
         browserSync.notify('Running svg sprites');
 
         return gulp.src(path.to.svg.files)
-            .pipe(plugins.svgSprites({
-                svgId: "svg-%f",
-                mode: "symbols",
-                cssFile: path.to.scss.source + '/_sprite.scss',
-                svg: {
-                    symbols: "symbols.svg"
-                }
-            }))
-            .pipe(gulp.dest(path.to.svg.source));
+
+            .pipe(
+                plugins.svgSymbols({
+                    className: '.icon--%f',
+                    title: false
+                })
+            )
+
+            .pipe( gulp.dest(path.to.svg.source) );
     });
 
 };
