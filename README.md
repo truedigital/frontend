@@ -10,22 +10,27 @@ Pulled together by Curtis Wist and Craig Coles and is actively maintained by the
     1. [Sass](#sass)
     2. [Javascript](#javascript)
 4. [Contributing](#contributing)
+5. [Changelog](#changelog)
 
 
-## Info
+### Info
 
 - Adopts a mobile first appraoch
 - Uses Sass for stylesheet pre-processing (scss syntax)
 - Follows OOCSS principles
 - Uses Gulp to concat / compile / uglify / build etc.
 
-## Quick start
+### Quick start
 
-1. Install:
+1. Clone the repo (or fork it)
+
+    git clone https://github.com/truedigital/frontend.git
+
+2. Install:
 
         npm install
 
-2. At the command prompt:
+3. At the command prompt:
 
         gulp watch
 
@@ -33,7 +38,7 @@ Pulled together by Curtis Wist and Craig Coles and is actively maintained by the
 
         gulp watch-templates
 
-## Structure
+### Structure
 
 ```
 ├── assets/
@@ -140,12 +145,16 @@ The best place to start is styles.scss. You can see what files are included, the
 
   - `modernizr-custom.js` : Generated using the build command. Contents of this file is dependant on the code that you write for your project.
 
-## Contributing
+### Contributing
 
-If you wish to contribute to our front end system, please read through our [contributing guidelines](#) first. This will ensure that you are posting things in the proper areas, and that you are following our coding standards.
+If you wish to contribute to True Digtial's Frontend, please ensure that you are posting things in the proper areas, and that you are following our coding standards/style.
 
-If you **find a bug**, **have an idea** or just simply **want to ask a question**, then please use the [Issues](#) tab.
+If you **find a bug**, **have an idea** or just simply **want to ask a question**, then please use the [Issues](http://github.com/truedigital/frontend/issues) tab.
 
-## License
+### Changelog
+
+You can keep up-to-date with the changes that we have made via our [releases page](https://github.com/truedigital/frontend/releases).
+
+### License
 
 Code released under the [MIT license](https://github.com/XXX/XXX/blob/master/LICENSE). Documentation released under [Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/).
