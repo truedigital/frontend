@@ -147,9 +147,7 @@ The best place to start is styles.scss. You can see what files are included, the
 
 ## Contributing
 
-If you wish to contribute to True Digtial's Frontend, please ensure that you are posting things in the proper areas, and that you are following our coding standards/style.
-
-If you **find a bug**, **have an idea** or just simply **want to ask a question**, then please use the [Issues](http://github.com/truedigital/frontend/issues) tab.
+If you wish to contribute to True Digtial's Frontend, please ensure that you are posting things in the proper areas, and that you are following our coding standards/style. Check out our [contributing guidelines](https://github.com/truedigital/frontend/blob/develop/CONTRIBUTING.md) for a more detailed overview on how to contribute.
 
 ## Changelog
 
