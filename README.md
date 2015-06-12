@@ -4,12 +4,12 @@ Pulled together by Curtis Wist and Craig Coles and is actively maintained by the
 
 ## Contents
 
-1. [Info](#Info)
-2. [Quick Start](#QuickStart)
-3. [Structure](#Structure)
-    1. [Sass](#Sass)
-    2. [Javascript](#Javascript)
-4. [Contributing](#Contributing)
+1. [Info](#info)
+2. [Quick Start](#quick-start)
+3. [Structure](#structure)
+    1. [Sass](#sass)
+    2. [Javascript](#javascript)
+4. [Contributing](#contributing)
 
 
 ## Info
