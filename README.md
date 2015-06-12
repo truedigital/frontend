@@ -1,6 +1,16 @@
-# [< Name >](#)
+# Frontend
 
-< Name > is a starting point for many web projects at True Digital. It has been pulled together by Curtis Wist and Craig Coles and is actively maintained by the front end team at [True Digital](http://www.trudigital.co.uk).
+Pulled together by Curtis Wist and Craig Coles and is actively maintained by the front end team at [True Digital](http://www.trudigital.co.uk).
+
+## Contents
+
+- [Info](#Info)
+- [Quick Start](#QuickStart)
+- [Structure](#Structure)
+    - [Sass](#Sass)
+    - [Javascript](#Javascript)
+- [Contributing](#Contributing)
+
 
 ## Info
 
@@ -8,10 +18,6 @@
 - Uses Sass for stylesheet pre-processing (scss syntax)
 - Follows OOCSS principles
 - Uses Gulp to concat / compile / uglify / build etc.
-
-## Road Map
-
-- Use Bower to handle front end dependencies
 
 ## Quick start
 
@@ -30,7 +36,6 @@
 ## Structure
 
 ```
-XXXXX/
 ├── assets/
 │   ├── css/
 │   ├── fonts/
@@ -58,7 +63,7 @@ XXXXX/
 
 Heres a quick breakdown of what the heck everything does:
 
-#### SASS
+#### Sass
 
 Note: All files should be saved as partials:  `_module-style.scss`
 
@@ -135,11 +140,9 @@ The best place to start is styles.scss. You can see what files are included, the
 
   - `modernizr-custom.js` : Generated using the build command. Contents of this file is dependant on the code that you write for your project.
 
-## Documentation
-
 ## Contributing
 
-If you wish to contribute to XXX, please read through our [contributing guidelines](#) first. This will ensure that you are posting things in the proper areas, and that you are following our coding standards.
+If you wish to contribute to our front end system, please read through our [contributing guidelines](#) first. This will ensure that you are posting things in the proper areas, and that you are following our coding standards.
 
 If you **find a bug**, **have an idea** or just simply **want to ask a question**, then please use the [Issues](#) tab.
 
