@@ -24,7 +24,7 @@ Pulled together by Curtis Wist and Craig Coles and is actively maintained by the
 
 1. Clone the repo (or fork it)
 
-    git clone https://github.com/truedigital/frontend.git
+        git clone https://github.com/truedigital/frontend.git
 
 2. Install:
 
