@@ -1,6 +1,6 @@
 # Frontend
 
-Pulled together by Curtis Wist and Craig Coles and is actively maintained by the front end team at [True Digital](http://www.trudigital.co.uk).
+Pulled together by Curtis Wist and Craig Coles and is actively maintained by the front end team at [True Digital](http://www.truedigital.co.uk).
 
 ## Contents
 
@@ -15,7 +15,7 @@ Pulled together by Curtis Wist and Craig Coles and is actively maintained by the
 
 ## Info
 
-- Adopts a mobile first appraoch
+- Adopts a mobile first approach
 - Uses Sass for stylesheet pre-processing (scss syntax)
 - Follows OOCSS principles
 - Uses Gulp to concat / compile / uglify / build etc.
