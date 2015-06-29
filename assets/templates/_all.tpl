@@ -58,7 +58,7 @@
 
 
 <body>
-@@include('../svg/svg-symbols.svg')
+@@include('../svg/symbol/svg/sprite.symbol.svg')
 
     <svg role="img" class="icon--checkmark">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#checkmark"></use>

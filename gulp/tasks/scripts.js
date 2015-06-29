@@ -15,7 +15,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
 
         browserSync.notify('Running scripts');
 
-        return gulp.src(path.to.js.partials + '/*.js')
+        return gulp.src(path.to.js.partials)
             .pipe(plugins.sourcemaps.init())
             .pipe(plugins.concat('scripts.js'))
             .on('error', error.handleError)

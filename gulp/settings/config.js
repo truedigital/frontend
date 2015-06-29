@@ -24,13 +24,10 @@ module.exports =
 
     svgConfig: {
         mode: {
-            view: {
-                bust: false,
-                render: {
-                    scss: true
-                }
-            },
-            symbol: true
+            symbol: {
+                inline: true,
+                example: true
+            }
         }
     }
 
