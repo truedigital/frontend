@@ -60,23 +60,25 @@
 <body>
 @@include('../svg/symbol/svg/sprite.symbol.svg')
 
-    <svg role="img" class="icon--checkmark">
+
+
+    <svg class="svg-checkmark-dims">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#checkmark"></use>
     </svg>
 
-    <svg role="img" class="icon--checkmark">
+    <svg class="svg-facebook-dims">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use>
     </svg>
 
-    <svg role="img" class="icon--checkmark">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#googleplus"></use>
+    <svg class="svg-googleplus-dims">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#googleplus"></use>
     </svg>
 
-    <svg role="img" class="icon--checkmark">
+    <svg class="svg-menu-dims">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use>
     </svg>
 
-    <svg role="img" class="icon--checkmark">
+    <svg class="svg-twitter-dims">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
     </svg>
 
