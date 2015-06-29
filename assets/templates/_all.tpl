@@ -60,8 +60,6 @@
 <body>
 @@include('../svg/symbol/svg/sprite.symbol.svg')
 
-
-
     <svg class="svg-checkmark-dims">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#checkmark"></use>
     </svg>
