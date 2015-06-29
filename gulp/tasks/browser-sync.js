@@ -10,7 +10,7 @@ module.exports = function(gulp, browserSync){
         browserSync({
             server: {
                 baseDir: './',
-                directory: true
+                // proxy: "local.site.com",
             },
             open: false
         });
@@ -29,7 +29,8 @@ module.exports = function(gulp, browserSync){
                 scroll: true
             },
             startPath: "assets/html",
-            open: true
+            open: true,
+            logPrefix: "Tru"
         });
     });
 

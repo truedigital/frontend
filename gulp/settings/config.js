@@ -22,4 +22,13 @@ module.exports =
 
     },
 
+    svgConfig: {
+        mode: {
+            symbol: {
+                inline: true,
+                example: true
+            }
+        }
+    }
+
 };

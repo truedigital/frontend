@@ -3,7 +3,8 @@
 
 module.exports = function(gulp, plugins, browserSync){
 
-    var path = require('../settings/paths'),
+    var svgConfig = require('../settings/config').svgConfig,
+        path = require('../settings/paths'),
         error = require('../settings/error-handler');
 
     gulp.task('sprites', function () {
@@ -11,14 +12,7 @@ module.exports = function(gulp, plugins, browserSync){
         browserSync.notify('Running svg sprites');
 
         return gulp.src(path.to.svg.files)
-
-            .pipe(
-                plugins.svgSymbols({
-                    className: '.icon--%f',
-                    title: false
-                })
-            )
-
+            .pipe( plugins.svgSprite(svgConfig) )
             .pipe( gulp.dest(path.to.svg.source) );
     });
 

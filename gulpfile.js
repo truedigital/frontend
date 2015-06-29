@@ -32,7 +32,7 @@ gulp.task('default', function () {
 });
 
 gulp.task('build' , function () {
-    gulp.start('modernizr', 'img-compress');
+    gulp.start('modernizr');
 });
 
 gulp.task('watch', ['default', 'browser-sync'], function () {
