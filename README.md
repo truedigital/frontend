@@ -115,7 +115,7 @@ Note: All files should be saved as partials:  `_module-style.scss`
   - `normalize` : Does exactly what it says on the tin. This contains all of the files needed to normalize the browser. The `_normalize.scss` in the base folder is the manifest file.
   - `susy` : Susy is our choice of grid structure, and here lays the files needed.
 
-- `elements` : These are generic elements that can be reused throughtout the project. (e.g. Buttons, forms, headings)
+- `elements` : These are generic elements that can be reused throughout the project. (e.g. Buttons, forms, headings)
 
 - `modules` : Starts empty, and is populated with project specific modules.
 
