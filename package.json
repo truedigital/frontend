@@ -1,7 +1,7 @@
 {
-  "name": "Tru",
-  "version": "0.0.1",
-  "description": "Front end build system maintained by the front end team at True Digital",
+  "name": "True Frontend",
+  "version": "1.0.0",
+  "description": "Frontend build system maintained by the front end team at True Digital",
   "private": true,
   "devDependencies": {
     "browser-sync": "^2.0",
