@@ -14,4 +14,6 @@ $mq-breakpoints: (
 );
 
 // Breakpoints in list will be displayed top right
-$mq-show-breakpoints: (mobile, mobile-large, tablet-small, tablet, desktop, wide);
+@if $environment == 'dev' {
+    $mq-show-breakpoints: (mobile, mobile-large, tablet-small, tablet, desktop, wide);
+}
