@@ -95,21 +95,20 @@ Note: All files should be saved as partials:  `_module-style.scss`
 
   - `mixins`
 
-    - `anchor-arrow`
+    - `anchor-arrow` - Adds a small triangle/arrow before or after the an element
     - `attr`
     - `circle`
-    - `clear-list`
     - `clearfix`
-    - `font-face`
-    - `font-size`
-    - `html5-input-types`
-    - `lists`
-    - `modernizr`
-    - `mq`
-    - `placeholder`
-    - `ratio-box`
-    - `shade`
-    - `tint`
+    - `font-face` - Writing @font-face rules in SASS
+    - `font-size` - Sets font size and line-height using Rems with a pixel fallback. E.g. `@include font-size(14)` and `@include line-height(34)` or `@include font-size(14,34)`
+    - `html5-input-types` - Generate a variable (`$all-text-inputs`) with a list of all html5 input types that have a text-based input, excluding textarea.
+    - `lists` - A few mixins containing some simple list styles - `list-unstyled`, `list-inline`, `list-float`, `list-divided`
+    - `modernizr` - `yep` and `nope` mixins to apply rules to support capabilities of the browser
+    - `mq` - [Sass MQ](https://github.com/sass-mq/sass-mq) Helps you compose media queries in an elegant way
+    - `placeholder` - Apply styles for HTML5 form element placeholders
+    - `ratio-box` - Responsive box that maintains an aspect ratio.
+    - `shade` - A mixin to mix a color with black
+    - `tint` - A mixin to mix a color with white.
     - `triangle`
 
   - `normalize` : Does exactly what it says on the tin. This contains all of the files needed to normalize the browser. The `_normalize.scss` in the base folder is the manifest file.
