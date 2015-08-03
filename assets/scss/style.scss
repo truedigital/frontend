@@ -13,7 +13,7 @@ $environment: 'dev';
 @import "base/fonts";
 
 // === BASE
-//@import "base/normalize";
+@import "base/normalize";
 @import "base/susy/susy";
 @import "base/mixins/mq";
 @import "base/grid";
