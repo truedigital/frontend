@@ -21,21 +21,10 @@ $environment: 'dev';
 @import "base/helper-classes";
 
 // === ELEMENTS
-@import "elements/blockquote";
-@import "elements/buttons";
-@import "elements/forms";
-@import "elements/forms-select";
-@import "elements/forms-check";
-@import "elements/headings";
-@import "elements/icons";
-@import "elements/images";
-@import "elements/links";
-@import "elements/lists";
-@import "elements/paragraphs";
-@import "elements/tables";
-@import "elements/type";
+@import "elements/**";
 
 // === MODULES (most styles should go here)
+@import "modules/**";
 
 // === DEV HELPERS
 @if $environment == 'dev' {
