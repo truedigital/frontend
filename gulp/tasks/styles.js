@@ -23,7 +23,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
             .pipe(plugins.sourcemaps.init({debug: env.sourceMap}))
 
 	    // globbing
-	    .pipe(plugins.cssGobbing({
+	    .pipe(plugins.cssGlobbing({
 		    extensions: ['.css', '.scss'],
 		    scssImportPath: {
 			    leading_underscore: false,
