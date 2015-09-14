@@ -22,6 +22,15 @@ module.exports = function(gulp, gutil, plugins, browserSync){
             // init sourcemaps
             .pipe(plugins.sourcemaps.init({debug: env.sourceMap}))
 
+	    // globbing
+	    .pipe(plugins.cssGlobbing({
+		    extensions: ['.css', '.scss'],
+		    scssImportPath: {
+			    leading_underscore: false,
+			    filename_extension: false
+		    }
+	    }))
+
             // compile scss
             .pipe(plugins.sass({
                 outputStyle : env.sassStyle,
