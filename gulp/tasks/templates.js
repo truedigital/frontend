@@ -11,6 +11,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
 
     gulp.task('templates', function () {
         return gulp.src(path.to.templates.files)
+            .pipe(plugins.frontMatter({ property: 'meta' }))
             .pipe(plugins.hb({
                 bustCache: true,
                 data: path.to.templates.data,

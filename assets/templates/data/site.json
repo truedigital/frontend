@@ -1,0 +1,21 @@
+{
+    "title": "True Digital",
+    "navigation": [
+        {
+            "label": "Nav Item",
+            "link": "#"
+        },
+        {
+            "label": "Nav Item",
+            "link": "#"
+        },
+        {
+            "label": "Nav Item",
+            "link": "#"
+        },
+        {
+            "label": "Nav Item",
+            "link": "#"
+        }
+    ]
+}

@@ -1,8 +1,7 @@
 <nav class="nav nav--primary">
   <ul>
-    <li><a href="#">Nav Item</a></li>
-    <li><a href="#">Nav Item</a></li>
-    <li><a href="#">Nav Item</a></li>
-    <li><a href="#">Nav Item</a></li>
+    {{#each site.navigation}}
+      <li><a title="{{label}}" href="{{link}}">{{label}}</a></li>
+    {{/each}}
   </ul>
 </nav>

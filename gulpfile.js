@@ -47,6 +47,7 @@ gulp.task('watch-templates', ['default', 'browser-sync-templates'], function () 
 function watchFiles(){
     gulp.watch(path.to.scss.files, ['styles']);
     gulp.watch(path.to.js.partials, ['scripts']);
+    gulp.watch(path.to.templates.data, ['templates', browserSync.reload]);
     gulp.watch(path.to.templates.files, ['templates', browserSync.reload]);
     gulp.watch(path.to.templates.partials, ['templates', browserSync.reload]);
     gulp.watch(path.to.svg.files, ['sprites', browserSync.reload]);
