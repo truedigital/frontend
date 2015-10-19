@@ -12,6 +12,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
     gulp.task('templates', function () {
         return gulp.src(path.to.templates.files)
             .pipe(plugins.hb({
+                bustCache: true,
                 data: path.to.templates.data,
                 helpers: [
                   './node_modules/handlebars-layouts/index.js',

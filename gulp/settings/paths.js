@@ -31,7 +31,7 @@ module.exports =
         templates: {
             source: path.join(_baseDir, '/templates'),
             files: path.join(_baseDir, '/templates/*.html'),
-            partials: path.join(_baseDir, '/templates/partials/**/*.hbs'),
+            partials: path.join(_baseDir, '/templates/partials/**/**.hbs'),
             data: path.join(_baseDir, '/templates/data/**/*.json'),
             helpers: path.join(_baseDir, '/templates/helpers/*.js'),
             destination: path.join(_baseDir, '/html'),
