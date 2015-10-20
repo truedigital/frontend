@@ -40,6 +40,7 @@ module.exports =
         svg: {
             source: path.join(_baseDir, '/svg'),
             files: path.join(_baseDir, '/svg/icons/*.svg'),
+            symbols: path.join(_baseDir, '/svg/symbol/svg/sprite.symbol.svg'),
         },
 
         images: path.join(_baseDir, '/images'),
