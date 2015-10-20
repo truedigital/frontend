@@ -19,10 +19,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
                   './node_modules/handlebars-layouts/index.js',
                   path.to.templates.helpers
                 ],
-                partials: [
-                    path.to.templates.partials,
-                    path.to.svg.symbols
-                ]
+                partials: path.to.templates.partials
             })).on('error', error.handleError)
             .pipe(gulp.dest(path.to.templates.destination));
             browserSync.reload();

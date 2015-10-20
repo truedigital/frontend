@@ -2,20 +2,24 @@
     "title": "True Digital",
     "navigation": [
         {
-            "label": "Nav Item",
-            "link": "#"
+            "text": "Nav Item",
+            "title": "Nav Item",
+            "url": "#"
         },
         {
-            "label": "Nav Item",
-            "link": "#"
+            "text": "Nav Item",
+            "title": "Nav Item",
+            "url": "#"
         },
         {
-            "label": "Nav Item",
-            "link": "#"
+            "text": "Nav Item",
+            "title": "Nav Item",
+            "url": "#"
         },
         {
-            "label": "Nav Item",
-            "link": "#"
+            "text": "Nav Item",
+            "title": "Nav Item",
+            "url": "#"
         }
     ]
 }
