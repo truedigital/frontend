@@ -27,9 +27,27 @@
     <meta name="Geo.Region" content="GB-BST" />
     <!-- eo:meta-->
 
+    <!--Twitter-->
+    <meta name="twitter:card" content="mypicture">
+    <meta name="twitter:site" content="{{site.twitter}}">
+    <meta name="twitter:title" content="{{site.title}}">
+    <meta name="twitter:description" content="{{site.description}}">
+    <meta name="twitter:image" content="{{site.image}}">
+
+    <!--Facebook-->
+    <meta property="og:image" content="{{site.image}}" itemprop="thumbnailUrl">
+    <meta property="og:title" content="{{site.title}}">
+    <meta property="og:url" content="{{site.description}}">
+    <meta property="og:site_name" content="{{site.facebook}}">
+
     <!-- so:stylesheets -->
       <link rel="stylesheet" href="/assets/css/style.min.css">
       <!--[if lte IE 9]><![endif]-->
+      {{#if (content "override_styles")}}
+      <style>
+        {{#block "override_styles"}}{{/block}}
+      </style>
+      {{/if}}
     <!-- eo:stylesheets -->
 
     <!-- so:favicon -->

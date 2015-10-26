@@ -1,7 +1,9 @@
-<nav class="nav nav--primary">
-  <ul>
+<nav class="nav nav--primary" role="navigation">
+  <ul class="list list--inline list--reset">
     {{#each site.navigation}}
-      <li>{{link text url title}}</li>
+      <li>
+        <a class="nav__item nav__item--primary" title="{{title}}" href="{{url}}">{{text}}</a>
+      </li>
     {{/each}}
   </ul>
 </nav>

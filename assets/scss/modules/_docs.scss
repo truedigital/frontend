@@ -1,0 +1,40 @@
+.site-header {
+    background: #1C3043;
+}
+
+// Logo
+.site-logo {
+    margin: 0 25px;
+    @include mq(tablet) {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+// Nav
+.nav {
+
+  &--primary {
+    @include mq(tablet) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__item {
+
+    @include font-size(13);
+    display: inline-block;
+    margin: 0 20px;
+    padding: 15px 0;
+    text-decoration: none;
+
+    &--primary {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #bccee3;
+    }
+
+  }
+
+}
