@@ -5,6 +5,9 @@ var argv = require('yargs').argv,
     gutil = require('gulp-util'),
     path = require('./gulp/settings/paths')
 
+// FABRICATOR
+var assemble = require('fabricator-assemble');
+
 // BROWSER SYNC
 var browserSync = require('browser-sync'),
     reload      = browserSync.reload;
@@ -19,7 +22,6 @@ var plugins = require("gulp-load-plugins")({
 // ==============================================================================
 require('./gulp/tasks/styles')(gulp, gutil, plugins, browserSync);
 require('./gulp/tasks/scripts')(gulp, gutil, plugins, browserSync);
-require('./gulp/tasks/templates')(gulp, gutil, plugins, browserSync);
 require('./gulp/tasks/browser-sync')(gulp, browserSync);
 require('./gulp/tasks/sprites')(gulp, plugins, browserSync);
 require('./gulp/tasks/modernizr')(gulp, plugins, browserSync);
@@ -43,6 +45,21 @@ gulp.task('watch-templates', ['default', 'browser-sync-templates'], function () 
     watchFiles();
 });
 
+gulp.task('assemble', function (done) {
+
+  assemble({
+      layouts: 'assets/templates/views/layouts/*',
+      layoutIncludes: 'assets/templates/views/layouts/includes/*',
+      views: ['assets/templates/views/**/*', '!assets/templates/views/+(layouts)/**'],
+      materials: 'assets/templates/materials/**/*',
+      data: 'assets/templates/data/**/*.{json,yml}',
+      docs: 'assets/templates/docs/**/*.md',
+      dest: 'assets/html'
+  });
+
+  done();
+
+});
 
 function watchFiles(){
     gulp.watch(path.to.scss.files, ['styles']);
