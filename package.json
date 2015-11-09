@@ -21,7 +21,7 @@
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-rename": "^1.2",
     "gulp-replace": "^0.5.3",
-    "gulp-sass": "^2.0.1",
+    "gulp-sass": "^2.1.0",
     "gulp-size": "^1.1.0",
     "gulp-sourcemaps": "^1.5",
     "gulp-svg-sprite": "^1.2.5",
@@ -31,5 +31,8 @@
     "handlebars-layouts": "^3.1.2",
     "stream-browserify": "^2.0.1",
     "yargs": "^3.10.0"
+  },
+  "dependencies": {
+    "helper-markdown": "^0.1.2"
   }
 }

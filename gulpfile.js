@@ -22,6 +22,7 @@ var plugins = require("gulp-load-plugins")({
 // ==============================================================================
 require('./gulp/tasks/styles')(gulp, gutil, plugins, browserSync);
 require('./gulp/tasks/scripts')(gulp, gutil, plugins, browserSync);
+require('./gulp/tasks/templates')(gulp, gutil, plugins, browserSync, assemble);
 require('./gulp/tasks/browser-sync')(gulp, browserSync);
 require('./gulp/tasks/sprites')(gulp, plugins, browserSync);
 require('./gulp/tasks/modernizr')(gulp, plugins, browserSync);
@@ -45,27 +46,9 @@ gulp.task('watch-templates', ['default', 'browser-sync-templates'], function () 
     watchFiles();
 });
 
-gulp.task('assemble', function (done) {
-
-  assemble({
-      layouts: 'assets/templates/views/layouts/*',
-      layoutIncludes: 'assets/templates/views/layouts/includes/*',
-      views: ['assets/templates/views/**/*', '!assets/templates/views/+(layouts)/**'],
-      materials: 'assets/templates/materials/**/*',
-      data: 'assets/templates/data/**/*.{json,yml}',
-      docs: 'assets/templates/docs/**/*.md',
-      dest: 'assets/html'
-  });
-
-  done();
-
-});
-
 function watchFiles(){
     gulp.watch(path.to.scss.files, ['styles']);
     gulp.watch(path.to.js.partials, ['scripts']);
-    gulp.watch(path.to.templates.data, ['templates', browserSync.reload]);
-    gulp.watch(path.to.templates.files, ['templates', browserSync.reload]);
-    gulp.watch(path.to.templates.partials, ['templates', browserSync.reload]);
+    gulp.watch(path.to.templates.allFiles, ['templates', browserSync.reload]);
     gulp.watch(path.to.svg.files, ['sprites', browserSync.reload]);
 }
