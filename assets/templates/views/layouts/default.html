@@ -54,6 +54,8 @@
     </head>
     <body class="styleguide">
         {{#svgSymbols}}{{/svgSymbols}}
+
+        {{#if fabricator}}
         <a name="top"></a>
         <header class="site-header">
             <div class="grid">
@@ -85,7 +87,14 @@
                 </nav>
             </div>
         </header>
-        <div class="page page--{{@root.page}} grid">
+        {{/if}}
+
+        {{#if fabricator}}
+        <div class="page page--fabricator page--{{@root.page}} grid">
+        {{else}}
+        <div class="page grid">
+        {{/if}}
+
             {{#if sidebar}}
                 <div class="sidebar">
                     {{> f-menu}}
@@ -95,12 +104,16 @@
                {% body %}
             </div>
         </div>
+
+        {{#if fabricator}}
         <footer class="site-footer grid">
             <p>Crafted by True Digital</p>
             <a class="site-footer__top" href="#top">
                 <span>Back to top</span>
             </a>
         </footer>
+        {{/if}}
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.js"><\/script>')</script>
         <script src="/assets/js/scripts/prism.js"></script>
