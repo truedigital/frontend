@@ -4,11 +4,22 @@
 
 // Logo
 .site-logo {
-    margin: 0 25px;
+
+    margin: 18px 25px;
+    width: 131px;
+    height: 64px;
+
     @include mq(tablet) {
         display: inline-block;
         vertical-align: middle;
     }
+
+    &__icon {
+        width: inherit;
+        height: inherit;
+        fill: #fff;
+    }
+
 }
 
 // Nav
@@ -79,6 +90,37 @@
 
 }
 
+.styleguide-item {
+
+    &__notes {}
+    &__preview {
+        position: relative;
+        padding: 16px;
+        border: 1px solid #e5e5e5;
+        border-bottom: 0;
+        border-radius: 3px 3px 0 0;
+    }
+
+    &__code {
+        margin-top: -1px;
+        border: 1px solid #e5e5e5;
+        border-radius: 0 0 3px 3px;
+
+        & pre {
+            font-size: 85%;
+            border-radius: 3px;
+            white-space: pre-wrap;
+        }
+
+    }
+
+}
+
+.styleguide .page {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 .sidebar {
     @include mq(tablet) {
         @include span(4);
@@ -90,4 +132,41 @@
     @include mq(tablet) {
         @include span(8 omega);
     }
+}
+
+.content > h1:first-child {
+    margin-top: 0;
+}
+
+.site-footer {
+
+    @include clear();
+
+    border-top: 1px solid #EEE;
+    padding: 20px 0;
+
+    &__top {
+
+        float: right;
+        text-align: center;
+        display: block;
+        background: #ff3800;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        text-decoration: none;
+
+        & span {
+            font-weight: bold;
+            color: #fff;
+        }
+
+    }
+
+    & p {
+        float:left;
+        margin: 0;
+        color: #999;
+    }
+
 }

@@ -53,71 +53,57 @@
 
     </head>
     <body class="styleguide">
-
         {{#svgSymbols}}{{/svgSymbols}}
-
+        <a name="top"></a>
         <header class="site-header">
-
             <div class="grid">
-
                 <a href="#" class="site-logo">
-                    <span>FrontEnd</span>
+                    <span class="sr-only">FrontEnd</span>
+                    <svg class="site-logo__icon">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+                    </svg>
                 </a>
-
                 <nav class="nav nav--primary" role="navigation">
-
                     <ul class="list list--inline list--reset">
-
                         <li>
                             <a class="nav__item nav__item--primary" title="Overview" href="index.html">Overview</a>
                         </li>
-
                         {{#each materials}}
                             <li>
                                 <a class="nav__item nav__item--primary" title="{{name}}" href="{{@key}}.html">{{name}}</a>
                             </li>
                         {{/each}}
-
                         {{#each views}}
                             <li>
                                 <a class="nav__item nav__item--primary" title="{{name}}" href="{{@key}}.html">{{name}}</a>
                             </li>
                         {{/each}}
-
                         <li>
                             <a class="nav__item nav__item--primary" title="Docs" href="docs.html">Docs</a>
                         </li>
-
                     </ul>
-
                 </nav>
-
             </div>
-
         </header>
-
         <div class="page page--{{@root.page}} grid">
-
             {{#if sidebar}}
-
                 <div class="sidebar">
                     {{> f-menu}}
                 </div>
-
             {{/if}}
-
             <div class="content">
                {% body %}
             </div>
-
         </div>
-
-        <footer class="site-footer grid"></footer>
-
+        <footer class="site-footer grid">
+            <p>Crafted by True Digital</p>
+            <a class="site-footer__top" href="#top">
+                <span>Back to top</span>
+            </a>
+        </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.js"><\/script>')</script>
-        <!-- <script src="/assets/js/scripts/prism.js"></script> -->
+        <script src="/assets/js/scripts/prism.js"></script>
         <!-- <script src="/assets/js/scripts.js"></script> -->
-
     </body>
 </html>

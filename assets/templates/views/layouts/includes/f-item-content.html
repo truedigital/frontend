@@ -1,13 +1,11 @@
 {{#if notes}}
-    <div class="f-item-notes" data-f-toggle="notes">
-    	{{{notes}}}
-    </div>
-{{/if}}
-
-<div class="f-item-preview">
-	{{{material @key @root}}}
+<div class="styleguide-item__notes">
+    {{{notes}}}
 </div>
-
-<div>
-	<pre><code class="language-markup">{{material @key @root}}</code></pre>
+{{/if}}
+<div class="styleguide-item__preview">
+    {{{material @key @root}}}
+</div>
+<div class="styleguide-item__code">
+    <pre><code class="language-markup">{{material @key @root}}</code></pre>
 </div>
