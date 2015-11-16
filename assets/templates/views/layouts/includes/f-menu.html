@@ -1,33 +1,29 @@
 <!-- fabricator menu -->
 <nav class="nav nav--secondary" role="navigation">
 
-    <ul class="nav__menu nav__menu--materials list list--reset">
-		{{#each materials}}
-			{{#each items}}
-				<li>
-					<a href="{{@../key}}.html#{{@key}}">{{name}}</a>
-				</li>
-			{{/each}}
-		{{/each}}
-    </ul>
+    {{#each materials}}
+        <div class="nav__menu nav__menu--{{toLowerCase name}}">
+            <h3 class="heading">{{name}}</h3>
+            <ul class="list list--reset">
+            	{{#each items}}
+            		<li>
+            			<a href="{{@../key}}.html#{{@key}}">{{name}}</a>
+            		</li>
+            	{{/each}}
+            </ul>
+        </div>
+    {{/each}}
 
-    <ul class="nav__menu nav__menu--views list list--reset">
-        {{#each views}}
-            {{#each items}}
+    <div class="nav__menu nav__menu--docs">
+        <h3 class="heading">Docs</h3>
+        <ul class="list list--reset">
+            {{#each docs}}
                 <li>
-                    <a href="{{@../key}}/{{@key}}.html" target="_blank">{{name}}</a>
+                    <a href="docs.html#{{@key}}">{{name}}</a>
                 </li>
             {{/each}}
-        {{/each}}
-    </ul>
-
-    <ul class="nav__menu nav__menu--docs list list--reset">
-        {{#each docs}}
-            <li>
-                <a href="docs.html#{{@key}}">{{name}}</a>
-            </li>
-        {{/each}}
-    </ul>
+        </ul>
+    </div>
 
 
 </nav>

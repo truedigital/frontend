@@ -1,15 +1,15 @@
 ---
+sidebar: false
 fabricator: true
+page: pages
 ---
 
-<h1 data-f-toggle="labels">Pages</h1>
+<h1>Pages</h1>
 
 <ul>
-{{#each views.pages.items}}
-
-	<li>
-		<a href="pages/{{@key}}.html" class="f-item-heading" target="_blank">{{name}}</a>
-	</li>
-
-{{/each}}
+    {{#each views.pages.items}}
+    	<li>
+    		<a href="pages/{{@key}}.html" class="f-item-heading" target="_blank">{{name}}</a>
+    	</li>
+    {{/each}}
 </ul>
