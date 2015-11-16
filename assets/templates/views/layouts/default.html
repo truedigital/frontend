@@ -1,23 +1,104 @@
-<!doctype html>
-<html lang="">
-<head>
+<!DOCTYPE html>
+<!--[if lt IE 7]>   <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>      <html class="no-js lt-ie10 lt-ie9 is-ie8"> <![endif]-->
+<!--[if IE 9]>      <html class="no-js lt-ie10 is-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
 
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
 
-	<title>{{title}}</title>
+        <title>{{title}}</title>
 
-</head>
-<body>
+        <!-- so:meta-->
+        <meta charset="utf-8">
+        <meta name="robots" content="all" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-language" content="en" />
+        <meta name="robots" content="noodp,noydir" />
+        <meta name="author" content="" />
+        <meta name="copyright" content="" />
+        <meta name="Geo.Country" content="GB" />
+        <meta name="Geo.Region" content="GB-BST" />
+        <!-- eo:meta-->
 
-  {{#svgSymbols}}{{/svgSymbols}}
+        <!--Twitter-->
+        <meta name="twitter:card" content="mypicture">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="">
 
-	{{#if fabricator}}
-		{{> f-menu}}
-	{{/if}}
+        <!--Facebook-->
+        <meta property="og:image" content="" itemprop="thumbnailUrl">
+        <meta property="og:title" content="">
+        <meta property="og:url" content="">
+        <meta property="og:site_name" content="">
 
-	{% body %}
+        <!-- so:stylesheets -->
+        <link rel="stylesheet" href="/assets/css/style.min.css">
+        <!--[if lte IE 9]><![endif]-->
+        <!-- eo:stylesheets -->
 
-</body>
+        <!-- so:favicon -->
+        <!-- eo:favicon -->
+
+        <!-- so:header JS -->
+        <script src="/assets/js/vendor/modernizr.js"></script>
+        <!-- eo:header JS -->
+
+    </head>
+    <body>
+
+        {{#svgSymbols}}{{/svgSymbols}}
+
+        <header class="site-header">
+
+            <div class="grid">
+
+                <a href="#" class="site-logo">
+                    <span>FrontEnd</span>
+                </a>
+
+                {{#if fabricator}}
+                    <nav class="nav nav--primary" role="navigation">
+                        <ul class="list list--inline list--reset">
+                            <a class="nav__item nav__item--primary" title="Overview" href="index.html">Overview</a>
+                            {{#each materials}}
+                                <li>
+                                    <a class="nav__item nav__item--primary" title="{{name}}" href="{{@key}}.html">{{name}}</a>
+                                </li>
+                            {{/each}}
+                            {{#each views}}
+                                <li>
+                                    <a class="nav__item nav__item--primary" title="{{name}}" href="{{@key}}.html">{{name}}</a>
+                                </li>
+                            {{/each}}
+                            <li>
+                                <a class="nav__item nav__item--primary" title="Docs" href="docs.html">Docs</a>
+                            </li>
+                        </ul>
+                    </nav>
+                {{/if}}
+
+            </div>
+
+        </header>
+
+        <div class="page grid">
+
+            {{#if fabricator}}
+                {{> f-menu}}
+            {{/if}}
+
+            {% body %}
+
+        </div>
+
+        <footer class="site-footer grid"></footer>
+
+    </body>
 </html>
