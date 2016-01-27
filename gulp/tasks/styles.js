@@ -17,7 +17,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
 
     gulp.task('styles', function() {
 
-        return gulp.src(path.to.scss.source + '/style.scss')
+        return gulp.src(path.to.scss.source + '/*.scss')
 
             // init sourcemaps
             .pipe(plugins.sourcemaps.init({debug: env.sourceMap}))
@@ -58,7 +58,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
 
             // Minify
             .pipe(env.local ? plugins.minifyCss() : gutil.noop() )
-            .pipe(env.local ? plugins.rename('style.min.css') : gutil.noop() )
+            .pipe(env.local ? plugins.rename({ suffix: '.min' }) : gutil.noop() )
             .pipe(env.local ? gulp.dest(path.to.css.source) : gutil.noop() )
             .pipe(plugins.size({ showFiles: false, gzip: true, title: env.name + ' styles'}))
 

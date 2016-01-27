@@ -1,0 +1,19 @@
+// Logo
+.site-logo {
+
+    margin: 18px 25px;
+    width: 131px;
+    height: 64px;
+
+    @include mq(tablet) {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__icon {
+        width: inherit;
+        height: inherit;
+        fill: #fff;
+    }
+
+}

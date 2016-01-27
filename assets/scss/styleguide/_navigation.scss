@@ -1,0 +1,67 @@
+// Nav
+.nav {
+
+  &--primary {
+
+    @include mq(tablet) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+  }
+
+  &__menu {
+
+    display:none;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 3px;
+
+    & .heading {
+        display:none;
+        margin-top: 0;
+    }
+
+    & li.is-active:before {
+      content: "";
+      width: 4px;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: -21px;
+      background: #ffb838;
+    }
+
+  }
+
+  .page--components &__menu--components,
+  .page--structures &__menu--structures,
+  .page--docs &__menu--docs {
+    display:block;
+  }
+
+  &__menu a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #666;
+    text-decoration: none;
+  }
+
+  &__item {
+
+    @include font-size(13);
+    display: inline-block;
+    margin: 0 20px;
+    padding: 15px 0;
+    text-decoration: none;
+
+    &--primary {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+      opacity: 0.8;
+    }
+
+  }
+
+}

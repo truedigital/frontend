@@ -1,0 +1,32 @@
+.site-footer {
+
+    @include clear();
+
+    border-top: 1px solid #EEE;
+    padding: 20px 0;
+
+    &__top {
+
+        float: right;
+        text-align: center;
+        display: block;
+        background: #ff3800;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        text-decoration: none;
+
+        & span {
+            font-weight: bold;
+            color: #fff;
+        }
+
+    }
+
+    & p {
+        float:left;
+        margin: 0;
+        color: #999;
+    }
+
+}
