@@ -11,5 +11,8 @@ assets/js/*.min.js
 assets/css/*.css
 assets/css/*.css.map
 
+# Generated Test Files
+backstop_data/
+
 # Vim temps
 *~

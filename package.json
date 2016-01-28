@@ -4,6 +4,7 @@
   "description": "Frontend build system maintained by the front end team at True Digital",
   "private": true,
   "devDependencies": {
+    "backstopjs": "^1.0.3",
     "browser-sync": "^2.0",
     "gulp": "^3.4",
     "gulp-autoprefixer": "^2.1",
