@@ -100,7 +100,13 @@ Note: All files should be saved as partials:  `_module-style.scss`
     - `circle`
     - `clearfix`
     - `font-face` - Writing @font-face rules in SASS
-    - `font-size` - Sets font size and line-height using Rems with a pixel fallback. E.g. `@include font-size(14)` and `@include line-height(34)` or `@include font-size(14,34)`
+    - `font-size` - Sets font size and line-height using Rems with a pixel fallback.
+    <p></p>
+    <pre>
+    @include font-size(14);
+    @include line-height(34);
+    @include font-size(14,34); // Font Size and Line Height combined
+    </pre>
     - `html5-input-types` - Generate a variable (`$all-text-inputs`) with a list of all html5 input types that have a text-based input, excluding textarea.
     - `lists` - A few mixins containing some simple list styles - `list-unstyled`, `list-inline`, `list-float`, `list-divided`
     - `modernizr` - `yep` and `nope` mixins to apply rules to support capabilities of the browser
@@ -143,6 +149,18 @@ The best place to start is styles.scss. You can see what files are included, the
   - `modernizr.js` : This is a development version of Modernizr
 
   - `modernizr-custom.js` : Generated using the build command. Contents of this file is dependant on the code that you write for your project.
+
+## Tests
+
+We are using [PhantomCSS](https://github.com/Huddle/PhantomCSS) for automating visual regression testing.
+
+To start running tests, ensure you follow these steps:
+
+    npm install phantomcss
+
+Once this has completed, you can now run the tests using the following command:
+
+    casperjs test tests/
 
 ## Contributing
 
