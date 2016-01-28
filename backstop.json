@@ -18,14 +18,12 @@
   ],
   "scenarios": [
     {
-      "label": "http://localhost:3000/assets/html/index.html",
-      "url": "http://localhost:3000/assets/html/index.html",
+      "label": "http://localhost:3000/assets/html/_all.html",
+      "url": "http://localhost:3000/assets/html/_all.html",
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".site-header",
-        ".page",
-        ".site-footer"
+        "body"
       ],
       "readyEvent": null,
       "delay": 500,
