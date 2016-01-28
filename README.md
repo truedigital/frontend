@@ -1,6 +1,6 @@
 # Frontend
 
-Pulled together by Curtis Wist and Craig Coles and is actively maintained by the front end team at [True Digital](http://www.truedigital.co.uk).
+Pulled together by Curtis Wist and Craig Coles and is a starting point for many web projects at True Digital. Actively maintained by the front end team at [True Digital](http://www.truedigital.co.uk).
 
 ## Contents
 

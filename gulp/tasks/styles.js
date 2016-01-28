@@ -22,18 +22,18 @@ module.exports = function(gulp, gutil, plugins, browserSync){
             // init sourcemaps
             .pipe(plugins.sourcemaps.init({debug: env.sourceMap}))
 
-	    // globbing
-	    .pipe(plugins.cssGlobbing({
-		    extensions: ['.css', '.scss'],
-		    scssImportPath: {
-			    leading_underscore: false,
-			    filename_extension: false
-		    }
-	    }))
+    	    // globbing
+    	    .pipe(plugins.cssGlobbing({
+    		    extensions: ['.css', '.scss'],
+    		    scssImportPath: {
+    			    leading_underscore: false,
+    			    filename_extension: false
+    		    }
+    	    }))
 
             // compile scss
             .pipe(plugins.sass({
-                outputStyle : env.sassStyle,
+                outputStyle : 'expanded',
                 sourceComments : 'normal', // none|normal|map
                 includePaths : ['scss'],
                 errLogToConsole : true
