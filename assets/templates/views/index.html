@@ -22,16 +22,25 @@ page: index
 
 <h2>Color</h2>
 
-{{#each toolkit.colors}}
-	<div class="f-color-chips">
-	{{#each this}}
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
-		</div>
-	{{/each}}
-	</div>
-{{/each}}
+<div class="sg-colors">
+    {{#each colors}}
+    	{{#each this}}
+    		<div class="sg-colors__block">
+
+                <div class="sg-colors__sample" style="background-color: {{this}}">
+                    <div class="sg-colors__block--center">
+                        <span class="sg-colors__hex">{{this}}</span>
+                    </div>
+                </div>
+
+                <div class="sg-colors__usage">
+                    <code>palette({{@../key}}, {{@key}})</code>
+                </div>
+
+    		</div>
+    	{{/each}}
+    {{/each}}
+</div>
 
 <h2>Typography</h2>
 

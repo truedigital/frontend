@@ -5,7 +5,7 @@
 // If you comment in sourcemaps and comment out autoprefixer. maps work fine.
 // I think autoprefixer wins over sourcemaps, so it's being used by default.
 
-module.exports = function(gulp, gutil, plugins, browserSync){
+module.exports = function(gulp, gutil, plugins, browserSync, jsonSass, source){
 
     var env = require('../settings/config').environment.production,
         path = require('../settings/paths'),
