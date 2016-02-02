@@ -4,11 +4,16 @@
 
     &__block {
 
-        @include span(3);
         margin-bottom: gutter(12);
 
-        &:nth-child(4n) {
-            @include last;
+        @include mq(mobile-large, tablet-small) {
+            @include span(6);
+            &:nth-child(2n) {@include last;}
+        }
+
+        @include mq(tablet-small) {
+            @include span(3);
+            &:nth-child(4n) {@include last;}
         }
 
         &--center {
