@@ -9,7 +9,8 @@ module.exports = function(gulp, gutil, plugins, browserSync){
 
     var env = require('../settings/config').environment.production,
         path = require('../settings/paths'),
-        error = require('../settings/error-handler');
+        error = require('../settings/error-handler'),
+        npmSassImporter = require('npm-sass').importer;
 
     if ( gutil.env.dev === true ) {
         env = require('../settings/config').environment.development
@@ -36,6 +37,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
                 outputStyle : 'expanded',
                 sourceComments : 'normal', // none|normal|map
                 includePaths : ['scss'],
+                importer: npmSassImporter,
                 errLogToConsole : true
             }))
             .on('error', error.handleError)
