@@ -9,8 +9,8 @@ module.exports = function(gulp, gutil, plugins, browserSync){
 
     var env = require('../settings/config').environment.production,
         path = require('../settings/paths'),
-        error = require('../settings/error-handler'),
-        npmSassImporter = require('npm-sass').importer;
+        error = require('../settings/error-handler');
+        moduleImporter = require('sass-module-importer');
 
     if ( gutil.env.dev === true ) {
         env = require('../settings/config').environment.development
@@ -37,7 +37,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
                 outputStyle : 'expanded',
                 sourceComments : 'normal', // none|normal|map
                 includePaths : ['scss'],
-                importer: npmSassImporter,
+                importer: moduleImporter(),
                 errLogToConsole : true
             }))
             .on('error', error.handleError)
@@ -59,7 +59,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
             .pipe(plugins.filter('**/*.css'), browserSync.reload({stream:true}))
 
             // Minify
-            .pipe(env.local ? plugins.minifyCss() : gutil.noop() )
+            .pipe(env.local ? plugins.cleanCss() : gutil.noop() )
             .pipe(env.local ? plugins.rename('style.min.css') : gutil.noop() )
             .pipe(env.local ? gulp.dest(path.to.css.source) : gutil.noop() )
             .pipe(plugins.size({ showFiles: false, gzip: true, title: env.name + ' styles'}))
