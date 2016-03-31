@@ -18,7 +18,7 @@ module.exports =
 
         scss:{
             source: path.join(_baseDir, '/scss'),
-            files: path.join(_baseDir, '/scss/**/*.scss'),
+            files: path.join(_baseDir, '/scss/**/**.scss'),
         },
 
         js: {
