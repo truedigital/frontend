@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Frontend build system maintained by the front end team at True Digital",
   "private": true,
+  "scripts": {
+    "styleguide": "node styleguide"
+  },
   "devDependencies": {
     "browser-sync": "^2.0",
     "fabricator-assemble": "^1.1.9",
@@ -36,6 +39,9 @@
     "yargs": "^3.10.0"
   },
   "dependencies": {
+    "express": "^4.13.4",
+    "express-rewrite": "0.0.4",
+    "express-urlrewrite": "^1.2.0",
     "helper-markdown": "^0.1.2"
   }
 }
