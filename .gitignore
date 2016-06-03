@@ -13,3 +13,7 @@ assets/css/*.css.map
 
 # Vim temps
 *~
+
+
+# Sublime files
+*.sublime*
