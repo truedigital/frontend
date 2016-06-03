@@ -147,7 +147,7 @@ fieldset {
     & .btn-select {
         position: relative;
         display: inline-block;
-        @extend %base-form-element;
+        // @extends base-form-element;
         padding-top: 12px;
 
         &:after {
