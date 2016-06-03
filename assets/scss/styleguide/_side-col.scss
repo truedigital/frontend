@@ -30,6 +30,7 @@
 
 
 .side-col__row {
+    position: relative;
     background-color: #ffb736;
     flex: 0 0 auto;
     position: relative;
@@ -45,8 +46,10 @@
     display: inline-block;
 
     @include mq($until: tablet){
-        float: right;
-        margin: 10px 0 0 0;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        margin-top: -15px;
         img {
             height: 40px;
             width: auto;

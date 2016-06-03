@@ -56,7 +56,6 @@
 
         {{#svgSymbols}}{{/svgSymbols}}
 
-        <a name="top"></a>
         {{#if sidebar}}
         <div class="sg-side-col">
 
@@ -113,6 +112,8 @@
 
         <main class="site page page--fabricator page--{{@root.page}} grid">
 
+            <a name="top"></a>
+
             <!--<header class="site">
                 <p class="sg-breadcrumb">
                     <strong>{{@root.page}}</strong>
@@ -126,7 +127,9 @@
             {% body %}
 
             <footer class="site-footer">
-                <div class="site-footer__credit credit">Made for Aspen by <span>True</span></div>
+                {{#if toolkit.global.client }}
+                    <div class="site-footer__credit credit">Made for {{toolkit.global.client}} by <span>True</span></div>
+                {{/if}}
                 <a class="site-footer__top" href="#top">
                     <span>Back to top</span>
                 </a>

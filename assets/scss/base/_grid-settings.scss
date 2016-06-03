@@ -13,11 +13,5 @@ $susy: (
     columns: 12,
     gutters: .25,
     global-box-sizing: border-box,
-    last-flow: to,
-    debug: (
-        image: show-columns,
-        color: rgba(#66f, .15),
-        output: overlay,
-        toggle: bottom left
-    )
+    last-flow: to
 );
