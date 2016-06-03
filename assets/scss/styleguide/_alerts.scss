@@ -1,0 +1,39 @@
+
+
+.alert-table {
+    width: 100%;
+
+    th {
+        text-align: left;
+    }
+
+    th,
+    td {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        vertical-align: top;
+    }
+
+    tbody {
+        color: #8c8279;
+        @include font-size(13);
+
+        td {
+            border-top: 1px solid #f2f2f2;
+            &:not(:last-child) {
+                padding-right: 40px
+            }
+        }
+    }
+
+}
+
+.alert-table__if {
+    color: #8e1616;
+}
+
+.alert-table__do {
+    color: #5c8018;
+}
+
+

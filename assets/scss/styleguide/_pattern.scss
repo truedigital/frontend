@@ -1,0 +1,141 @@
+
+// === PATTERN
+
+.pattern {
+    margin-top: 40px;
+
+    &:not(:last-child){
+        margin-bottom: 40px;
+    }
+
+    code[class*="language"]{
+        padding: 1.5em 1.5em;
+    }
+}
+
+
+// === TABS
+.pattern-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pattern-nav__tab {
+    display: inline-block;
+    border: 1px solid #e8e6e4;
+    border-bottom: 0;
+    padding: 13px 10px;
+    margin-right: 3px;
+    text-transform: uppercase;
+    @include font-size(13,20);
+    font-weight: bold;
+    background: #fff;
+    color: #007398;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+
+    @include mq(tablet){
+        padding: 13px 20px;
+    }
+
+    &.is-active {
+        background: #f3f2f1;
+        color: #8c8279;
+        cursor: default;
+
+        &:after {
+            content: '';
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            background: #f3f2f1;
+        }
+    }
+}
+
+
+// === PANES
+
+.pattern__panes {
+    border: 1px solid #e8e6e4;
+    background-color: #f3f2f1;
+    width: 100%;
+    padding: 10px;
+    transition: width 400ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    [data-viewport="mobile"] & {
+        width: 380px;
+    }
+
+    & > * {
+        display: none;
+    }
+
+    @include mq(tablet){
+        padding: 20px;
+    }
+}
+
+
+
+// === PREVIEW
+
+.pattern-preview {
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+    overflow-y: auto;
+    @include mq(tablet){
+        padding: 20px;
+    }
+}
+
+.pattern-preview__scroll-wrap {
+    min-width: 320px;
+}
+
+
+
+// === MARKUP
+
+.pattern-markup {
+    position: relative;
+    //border: 1px solid #e8e6e4;
+}
+
+.pattern-markup__content {
+    background-color: #fff;
+    padding: 0;
+    font-size: 12px;
+    max-height: 800px;
+}
+
+.pattern-markup__copy {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 99;
+    fill: #8c8279;
+    opacity: .2;
+    transition: all 150ms;
+    cursor: pointer;
+
+    &:hover {
+        fill: #007398;
+    }
+
+    .pattern-markup:hover & {
+        opacity: .6;
+    }
+
+    .pattern-markup:hover &.is-success,
+    &.is-success {
+        fill: green;
+        opacity: .7;
+    }
+
+}

@@ -8,7 +8,6 @@
 
     <head>
 
-
         <title>{{title}} {{#if toolkit.global.site-name }} | {{toolkit.global.site-name}} {{/if}}</title>
 
         <!-- so:meta-->
@@ -53,66 +52,91 @@
         <!-- eo:header JS -->
 
     </head>
-    <body class="styleguide">
+    <body class="styleguide language-markup">
 
         {{#svgSymbols}}{{/svgSymbols}}
 
         <a name="top"></a>
-        <header class="site-header">
-            <div class="grid">
-                <a href="index.html" class="site-logo">
-                    <span class="sr-only">FrontEnd</span>
-                    <svg class="site-logo__icon">
+        {{#if sidebar}}
+        <div class="sg-side-col">
+
+            <div class="side-col__row">
+                <div class="nav-toggle">
+                    <button class="hamburger hamburger--squeeze" type="button">
+                      <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                      </span>
+                    </button>
+                    <span class="nav-toggle__text">Menu</span>
+                </div>
+                <a href="index.html" class="logo">
+                    <svg class="icon icon--site-logo">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
                     </svg>
                 </a>
-                <nav class="nav nav--primary" role="navigation">
-                    <ul class="list list--inline list--reset">
-                        <li>
-                            <a class="nav__item nav__item--primary" title="Overview" href="index.html">Overview</a>
+            </div>
+
+            <div class="main-nav__wrap">
+
+                <nav class="main-nav" data-mcs-theme="minimal">
+                    <div class="main-nav__scroll">
+                    <ul class="main-nav__nav">
+                        <li class="main-nav__primary" data-nav="overview"><a title="Overview" href="index.html">Overview</a></li>
+                        <li class="main-nav__primary">
+                            <a href>Modules <svg class="icon icon--arrow"><use xlink:href="#down-arrow"></use></svg></a>
+                            <ul class="main-nav__dropdown">
+                                {{#each materials}}
+                                    {{#each items}}
+                                        <li class="main-nav__secondary" data-nav="{{name}}"><a title="{{name}}" href="{{@../key}}.html#{{@key}}">{{name}}</a></li>
+                                    {{/each}}
+                                {{/each}}
+                            </ul>
                         </li>
-                        {{#each materials}}
-                            <li>
-                                <a class="nav__item nav__item--primary" title="{{name}}" href="{{@key}}.html">{{name}}</a>
-                            </li>
-                        {{/each}}
                         {{#each views}}
-                            <li>
-                                <a class="nav__item nav__item--primary" title="{{name}}" href="{{@key}}.html">{{name}}</a>
-                            </li>
+                            <li class="main-nav__primary" data-nav="{{name}}"><a title="{{name}}" href="{{@key}}.html">{{name}}</a></li></li>
                         {{/each}}
-                        <li>
-                            <a class="nav__item nav__item--primary" title="Docs" href="docs.html">Docs</a>
+                        <li class="main-nav__primary">
+                            <a href>Docs <svg class="icon icon--arrow"><use xlink:href="#down-arrow"></use></svg></a>
+                            <ul class="main-nav__dropdown">
+                            {{#each docs}}
+                                <li class="main-nav__secondary" data-nav="{{name}}"><a title="{{name}}" href="docs.html#{{@key}}">{{name}}</a></li>
+                            {{/each}}
+                            </ul>
                         </li>
                     </ul>
                 </nav>
-            </div>
-        </header>
 
-        <div class="page page--fabricator page--{{@root.page}} grid">
-
-            {{#if sidebar}}
-                <div class="sidebar">
-                    {{> f-menu}}
-                </div>
-            {{/if}}
-
-            <div class="content">
-               {% body %}
             </div>
 
         </div>
+        {{/if}}
 
-        <footer class="site-footer grid">
-            <p>Crafted by True Digital</p>
-            <a class="site-footer__top" href="#top">
-                <span>Back to top</span>
-            </a>
-        </footer>
+        <main class="site page page--fabricator page--{{@root.page}} grid">
+
+            <!--<header class="site">
+                <p class="sg-breadcrumb">
+                    <strong>{{@root.page}}</strong>
+                </p>
+            </header>-->
+
+            <div class="section section--intro">
+                <h1 data-heading="h1">{{@root.page}}</h1>
+            </div>
+
+            {% body %}
+
+            <footer class="site-footer">
+                <div class="site-footer__credit credit">Made for Aspen by <span>True</span></div>
+                <a class="site-footer__top" href="#top">
+                    <span>Back to top</span>
+                </a>
+            </footer>
+
+        </main>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.js"><\/script>')</script>
         <script src="/assets/js/scripts/prism.js"></script>
-        <!-- <script src="/assets/js/scripts.js"></script> -->
+        <script src="/assets/js/styleguide.js"></script>
     </body>
 </html>

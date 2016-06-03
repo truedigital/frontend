@@ -1,0 +1,331 @@
+
+
+// === COLOR LIST
+
+.color-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: -30px !important;
+    margin-top: 30px;
+
+    &__color {
+        text-align: right;
+        width: 100px;
+        height: 100px;
+        display: inline-flex;
+        position: relative;
+        margin-bottom: 30px;
+
+        @include mq($until: mobile-large){
+            &:not(:nth-child(2n)){
+                margin-right: 60px;
+            }
+        }
+
+        @include mq(mobile-large, tablet-large){
+            margin-right: 60px;
+        }
+
+        @include mq(tablet-large){
+            &:not(:last-child){
+                margin-right: 60px;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include triangle(inherit, 100px, 100px, top left);
+        }
+    }
+
+    div {
+        width: 100%;
+        margin-top: 65px;
+        @include font-size(13, 19);
+        color: #000;
+    }
+
+    strong {
+        display: block;
+    }
+}
+
+
+// === CORNER COLORS
+
+$color-list: (
+    primary--black: #000,
+    primary--white: #fff,
+    secondary--blue: #007398,
+    secondary--green: #5c8018,
+    secondary--yellow: #ac8d1c,
+    secondary--red: #8e1616,
+    secondary--grey: #8c8279,
+    secondary--purple: #6d2077,
+    tint--blue: #f2f8fa,
+    tint--green: #f7f9f3,
+    tint--yellow: #fbf9f3,
+    tint--red: #f9f3f3
+);
+
+.color-list {
+    @each $name, $color in $color-list {
+        [data-color="#{$name}"]{
+            color: $color;
+        }
+    }
+}
+
+
+// === TYPOGRAPHY EXAMPLES
+
+.color-typography-example {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    li {
+        display: block;
+        padding: 14px 20px;
+        margin-left: 30px;
+        font-weight: bold;
+        position: relative;
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+
+        @include mq($until: tablet){
+            @include line-height(18);
+        }
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: -23px;
+            margin-top: -5px;
+            height: 10px;
+            content: '';
+        }
+
+        &[data-icon="tick"]:before {
+            width: 12px;
+            background: url('../svg/tick.svg') no-repeat;
+        }
+
+        &[data-icon="cross"]:before {
+            width: 10px;
+            background: url('../svg/cross.svg') no-repeat;
+        }
+    }
+}
+
+
+.color-typography-example {
+    [data-color="white-black"]{
+        color: #fff;
+        background-color: #000;
+    }
+
+    [data-color="white-grey"]{
+        color: #fff;
+        background-color: #8c8279;
+    }
+
+    [data-color="white-lightgrey"]{
+        color: #fff;
+        background-color: #e8e6e4;
+    }
+
+    [data-color="black-white"]{
+        color: #000;
+        background-color: #fff;
+        border: 1px solid #e8e6e4;
+        padding: 12px 18px;
+    }
+
+    [data-color="black-lightgrey"]{
+        color: #000;
+        background-color: #e8e6e4;
+    }
+
+    [data-color="black-grey"]{
+        color: #000;
+        background-color: #8c8279;
+    }
+
+    [data-color="black-tinted"]{
+        color: #000;
+        background-color: #f2f8fa;
+        border: 1px solid #b2d5e0;
+        padding: 12px 18px;
+    }
+
+    [data-color="white-blue"]{
+        color: #fff;
+        background-color: #007398;
+    }
+}
+
+
+// COLOR TINTS
+
+$tint-list: (
+    blue: #007398,
+    green: #5c8018,
+    yellow: #ac8d1c,
+    red: #8e1616,
+    grey: #8c8279,
+    purple: #6d2077,
+);
+
+.color-tints {
+    @each $name, $color in $tint-list {
+        [data-color="#{$name}"] [data-tint] {
+            color: $color;
+            &:before {
+                color: $color;
+            }
+        }
+    }
+}
+
+.color-tints {
+    overflow: hidden;
+    position: relative;
+    min-height: 333px;
+    margin-top: 30px;
+
+    [data-tint]{
+        position: relative;
+        div {
+            position: absolute;
+            font-weight: bold;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+        }
+    }
+    [data-tint="50"] {
+        color: #fff !important;
+        div {
+            bottom: 15px;
+            right: 15px;
+        }
+        &:before {
+            opacity: .5;
+            @include triangle(currentColor, 100px, 100px, bottom right);
+            bottom: 0;
+            right: 0;
+        }
+    }
+    [data-tint="25"] {
+        div {
+            bottom: 15px;
+            left: 15px;
+        }
+        &:before {
+            opacity: .25;
+            @include triangle(currentColor, 100px, 100px, bottom left);
+            bottom: 0;
+            left: 0;
+        }
+    }
+    [data-tint="15"] {
+        div {
+            top: 15px;
+            left: 15px;
+        }
+        &:before {
+            opacity: .15;
+            @include triangle(currentColor, 100px, 100px, top left);
+            top: 0;
+            left: 0;
+        }
+    }
+    [data-tint="5"] {
+        div {
+            top: 15px;
+            right: 15px;
+        }
+        &:before {
+            opacity: .05;
+            @include triangle(currentColor, 100px, 100px, top right);
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+.color-tints__list {
+    list-style: none;
+    margin: 0 30px 20px 0;
+    padding: 0;
+    width: 202px;
+    overflow: hidden;
+    display: inline-block;
+    cursor: default;
+
+    li {
+        margin: 0;
+        display: inline-block;
+        float: left;
+        width: span(6);
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+        width: 100px;
+        height: 100px;
+
+        &[data-tint="25"],
+        &[data-tint="15"] {
+            border-right: 0;
+        }
+
+    }
+
+
+    @include mq(tablet, desktop){
+        float: left;
+        margin-right: 0;
+        &:not(:nth-child(2n)){
+            margin-right: 20px;
+        }
+
+
+    }
+
+
+    @include mq(1204px){
+
+        &:nth-child(4){
+            clear: both;
+        }
+
+        &[data-color="green"],
+        &[data-color="red"],
+        &[data-color="grey"] {
+            position: absolute;
+            top: 125px;
+        }
+
+        &[data-color="green"] {
+            left: 116px;
+        }
+        &[data-color="red"] {
+            left: 348px;
+        }
+        &[data-color="grey"] {
+            left: 583px;
+        }
+    }
+
+
+}
+

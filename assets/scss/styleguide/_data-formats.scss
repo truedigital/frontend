@@ -1,0 +1,81 @@
+
+.time-date-example {
+    overflow: hidden;
+    @include font-size(13);
+
+    table,
+    ul {
+        color: #8c8279;
+    }
+
+    [data-heading="h4"]{
+        margin-bottom: 10px;
+    }
+
+
+}
+
+.time-example {
+    @include mq(wide){
+        @include span(6);
+    }
+
+}
+
+.date-example {
+    @include mq(wide){
+        @include span(6 last);
+    }
+}
+
+
+
+
+
+
+.date-time-table {
+
+    th {
+        text-align: left;
+        @include font-size(14);
+        font-weight: bold;
+    }
+
+    td, th {
+        border-bottom: 1px solid #f2f2f2;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    td:first-child {
+        padding-right: 20px;
+        @include mq($until: tablet){
+            width: 120px;
+        }
+
+        @include mq(tablet){
+            padding-right: 60px;
+        }
+    }
+
+    .icon {
+        margin-right: 5px;
+        @include mq(tablet){
+            margin-right: 20px;
+        }
+    }
+    .icon--cross {
+        fill: #8e1616;
+    }
+
+    &__correct {
+        color: #5c8018;
+    }
+
+    &__incorrect {
+        color: #8e1616;
+    }
+
+
+}
+

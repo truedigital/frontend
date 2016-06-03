@@ -23,7 +23,8 @@ module.exports =
 
         js: {
             source: path.join(_baseDir, '/js'),
-            partials: path.join(_baseDir, '/js/partials'),
+            partials: path.join(_baseDir, '/js/partials/**'),
+            styleguideJs: path.join(_baseDir, '/js/styleguide/**'),
             vendor: path.join(_baseDir, '/js/vendor'),
             scripts: path.join(_baseDir, '/js/scripts'),
         },

@@ -1,0 +1,40 @@
+
+.layout-example {
+
+    .page-header {
+        background: #eee;
+        min-height: 80px;
+    }
+
+    .side-col {
+        @include mq(tablet){
+            width: 230px;
+            float: left;
+        }
+    }
+
+    .page-main {
+        overflow: hidden;
+
+        section {
+            min-height: 100px;
+            border: 1px solid #eee;
+            margin-bottom: gutter(6);
+        }
+    }
+
+    .col-1 {
+        @include mq(tablet){
+            @include span(6);
+        }
+
+    }
+
+    .col-2 {
+        @include mq(tablet){
+            @include span(6 last);
+        }
+
+    }
+}
+

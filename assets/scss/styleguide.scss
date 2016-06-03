@@ -15,5 +15,22 @@ $environment: 'dev';
 @import "base/susy/susy";
 @import "base/mixins/mq";
 
-// === ELEMENTS
+// === VENDOR
+@import "vendor/**";
+
+// === STYLEGUIDE SPECIFIC
 @import "styleguide/**";
+
+// === HAMBURGERS
+$hamburger-padding-x                       : 5px;
+$hamburger-padding-y                       : 0px;
+$hamburger-layer-width                     : 20px;
+$hamburger-layer-height                    : 2px;
+$hamburger-layer-spacing                   : 4px;
+$hamburger-layer-color                     : #fff;
+$hamburger-layer-border-radius             : 4px;
+$hamburger-hover-opacity                   : 0.7;
+$hamburger-hover-transition-duration       : 0.15s;
+$hamburger-hover-transition-timing-function: linear;
+
+@import "base/hamburgers/hamburgers";

@@ -6,12 +6,12 @@
 
         margin-bottom: gutter(12);
 
-        @include mq(mobile-large, tablet-small) {
+        @include mq(mobile-large, tablet) {
             @include span(6);
             &:nth-child(2n) {@include last;}
         }
 
-        @include mq(tablet-small) {
+        @include mq(tablet) {
             @include span(3);
             &:nth-child(4n) {@include last;}
         }

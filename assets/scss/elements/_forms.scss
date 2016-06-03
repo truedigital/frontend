@@ -152,7 +152,7 @@ fieldset {
 
         &:after {
             content: '';
-            @include triangle (14px, #fff, down);
+            @include triangle(#fff, 14px, 14px, bottom);
             position: absolute;
             top: 50%;
             right: 11px;

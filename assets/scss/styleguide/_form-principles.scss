@@ -1,0 +1,22 @@
+
+.form-principles-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    [data-heading]{
+        margin-bottom: 0px;
+    }
+
+    > li {
+        margin-bottom: 30px;
+    }
+
+
+    ul {
+        list-style: disc;
+    }
+
+
+
+}

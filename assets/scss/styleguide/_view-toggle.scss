@@ -1,0 +1,42 @@
+
+
+.view-toggle {
+    margin-top: 20px;
+
+    @include mq($until: tablet-large){
+        display: none;
+    }
+
+}
+
+.view-toggle__label {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.view-toggle__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.view-toggle__item {
+    display: inline-block;
+    width: 50px;
+    padding: 11px 0 6px;
+    text-align: center;
+    border: 1px solid #e8e6e4;
+    border-radius: 5px;
+    fill: #007398;
+    margin-right: 3px;
+    cursor: pointer;
+
+
+    &.is-active {
+        background: #f3f2f1;
+        fill: #d9d6d3;
+    }
+}
