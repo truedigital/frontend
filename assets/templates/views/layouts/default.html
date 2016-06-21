@@ -81,6 +81,8 @@
                     <div class="main-nav__scroll">
                     <ul class="main-nav__nav">
                         <li class="main-nav__primary" data-nav="overview"><a title="Overview" href="index.html">Overview</a></li>
+                        <li class="main-nav__primary" data-nav="colours"><a title="Colours" href="colours.html">Colours</a></li>
+                        <li class="main-nav__primary" data-nav="colours"><a title="Typography" href="typography.html">Typography</a></li>
                         <li class="main-nav__primary">
                             <a href>Modules <svg class="icon icon--arrow"><use xlink:href="#down-arrow"></use></svg></a>
                             <ul class="main-nav__dropdown">
@@ -122,6 +124,9 @@
 
             <div class="section section--intro">
                 <h1 data-heading="h1">{{@root.page}}</h1>
+                {{#if @root.notes }}
+                <p class="em">{{@root.notes}}</p>
+                {{/if}}
             </div>
 
             {% body %}

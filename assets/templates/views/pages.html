@@ -5,10 +5,14 @@ fabricator: true
 page: pages
 ---
 
-<ul>
-    {{#each views.pages.items}}
-    	<li>
-    		<a href="pages/{{@key}}.html" class="f-item-heading" target="_blank">{{name}}</a>
-    	</li>
-    {{/each}}
-</ul>
+<section class="section">
+
+    <ul>
+        {{#each views.pages.items}}
+        	<li>
+        		<a href="pages/{{@key}}.html" class="f-item-heading" target="_blank">{{name}}</a>
+        	</li>
+        {{/each}}
+    </ul>
+
+</section>

@@ -5,11 +5,15 @@ fabricator: true
 page: docs
 ---
 
-{{#each docs}}
+<section class="section">
 
-	<div class="f-item-group">
-		<h2 id="{{@key}}"><a href="#{{@key}}">{{name}}</a></h2>
-		{{{content}}}
-	</div>
+    {{#each docs}}
 
-{{/each}}
+    	<div class="f-item-group">
+    		<h2 id="{{@key}}"><a href="#{{@key}}">{{name}}</a></h2>
+    		{{{content}}}
+    	</div>
+
+    {{/each}}
+
+</section>

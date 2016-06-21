@@ -5,8 +5,12 @@ fabricator: true
 page: components
 ---
 
-{{#each materials.components.items}}
+<section class="section">
 
-    {{> f-item this}}
+    {{#each materials.components.items}}
 
-{{/each}}
+        {{> f-item this}}
+
+    {{/each}}
+
+</section>
