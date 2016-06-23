@@ -59,7 +59,7 @@ module.exports = function(gulp, gutil, plugins, browserSync, jsonSass, source){
             .pipe(plugins.filter('**/*.css'), browserSync.reload({stream:true}))
 
             // Minify
-            .pipe(env.local ? plugins.minifyCss() : gutil.noop() )
+            .pipe(env.local ? plugins.cleanCss() : gutil.noop() )
             .pipe(env.local ? plugins.rename({ suffix: '.min' }) : gutil.noop() )
             .pipe(env.local ? gulp.dest(path.to.css.source) : gutil.noop() )
             .pipe(plugins.size({ showFiles: false, gzip: true, title: env.name + ' styles'}))
