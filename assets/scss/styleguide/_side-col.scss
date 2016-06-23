@@ -1,0 +1,64 @@
+
+
+.sg-side-col {
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 100vh;
+
+
+    @include mq($until: tablet){
+        z-index: 99;
+
+        &.nav-open {
+            height: 100vh;
+        }
+
+    }
+    @include mq(tablet){
+        width: 240px;
+        text-align: center;
+        background-color: #FFb736;
+        height: 100vh;
+    }
+    @include mq(tablet-large){
+        width: 280px;
+    }
+}
+
+
+.side-col__row {
+    position: relative;
+    background-color: #ffb736;
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 3;
+    @include mq($until: tablet){
+        min-height: 60px;
+        padding: 0 20px;
+    }
+}
+
+
+.logo {
+    display: inline-block;
+
+    @include mq($until: tablet){
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        margin-top: -15px;
+        img {
+            height: 40px;
+            width: auto;
+        }
+    }
+
+    @include mq(tablet){
+        margin: 40px 0;
+    }
+
+
+}

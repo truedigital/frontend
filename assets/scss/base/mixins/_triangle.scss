@@ -1,52 +1,91 @@
-// -----------------------------------------------------------------------------------------------------------------
-//  Triangle mixin
-//  @include triangle(size, color, direction);
-//  @include triangle(12px, gray, left);
-// -------------------------------------------------------------------------------------------------------------------
+//////////////////////////////
+// Draw triangles
+//////////////////////////////
 
+// https://github.com/at-import/toolkit#triangles
+// @include triangle([$color, $width, $height, $angle])
 
-@mixin triangle ($size, $color, $direction) {
-	height: 0;
-	width: 0;
+@mixin triangle($color: #000, $width: 20px, $height: 20px, $angle: 0) {
 
-	@if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
-		border-color: transparent;
-		border-style: solid;
-		border-width: $size / 2;
+  $color: if($color != null, $color, toolkit-get('triangle color'));
+  $height: if($height != null, $height, toolkit-get('triangle height'));
+  $width: if($width != null, $width, toolkit-get('triangle width'));
+  $angle: if($angle != null, $angle, toolkit-get('triangle angle'));
 
-		@if $direction == up {
-			border-bottom-color: $color;
-		}
-		@else if $direction == right {
-	      		border-left-color:   $color;
-		}
-		@else if $direction == down {
-			border-top-color:    $color;
-		}
-		@else if $direction == left {
-			border-right-color:  $color;
-		}
-	}
+  @if nth($angle, 1) == "top" or nth($angle, 1) == "bottom" {
+    $angle: "#{$angle}";
+  }
 
-  	@else if ($direction == up-right) or ($direction == up-left) {
-		border-top: $size solid $color;
+  @if $angle == "top" {
+    $angle: 0;
+  }
+  @if $angle == "top right" {
+    $angle: 45 * 7;
+  }
+  @if $angle == "right" {
+    $angle: 45 * 2;
+  }
+  @if $angle == "bottom right" {
+    $angle: 45 * 1;
+  }
+  @if $angle == "bottom" {
+    $angle: 45 * 4;
+  }
+  @if $angle == "bottom left" {
+    $angle: 45 * 3;
+  }
+  @if $angle == "left" {
+    $angle: 45 * 6;
+  }
+  @if $angle == "top left" {
+    $angle: 45 * 5;
+  }
 
-		@if $direction == up-right {
-			border-left:  $size solid transparent;
-		}
-		@else if $direction == up-left {
-			border-right: $size solid transparent;
-		}
-	}
+  @if unit($height) == "" or unit($height) == "%" {
+    @debug "in triangle #{$height} is not a compatible unit for height."
+  }
 
-	@else if ($direction == down-right) or ($direction == down-left) {
-		border-bottom: $size solid $color;
+  @if unit($width) == "" or unit($width) == "%" {
+    @debug "in triangle #{$width} is not a compatible unit for width."
+  }
 
-		@if $direction == down-right {
-			border-left:  $size solid transparent;
-		}
-		@else if $direction == down-left {
-			border-right: $size solid transparent;
-    		}
-  	}
+  // offset 45deg to make each side start at 0
+  $deg: $angle + 45;
+  // if units, remove units
+  @if unit($deg) == deg {
+    $deg: $deg / 1deg;
+  }
+  // shift to be on a scale from 0 to 90.
+  @while $deg > 90 {
+    $deg: $deg - 90;
+  }
+  @while $deg < 0 {
+    $deg: $deg + 90;
+  }
+  // Get a ratio of 90 to multiply by.
+  $deg: $deg / 90;
+
+  // make sure metrics are reset
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+
+  // run through sides
+  @if $angle <= 45 or $angle > 315 {
+    border-bottom-color: $color;
+    border-width: 0 ($width * abs($deg - 1)) $height ($width * $deg);
+  }
+  @if $angle > 45 and $angle <= 135 {
+    border-left-color: $color;
+    border-width: ($height * $deg) 0 ($height * abs($deg - 1)) $width;
+  }
+  @if $angle > 135 and $angle <= 225 {
+    border-top-color: $color;
+    border-width: $height ($width * $deg) 0 ($width * abs($deg - 1));
+  }
+  @if $angle > 225 and $angle <= 315 {
+    border-right-color: $color;
+    border-width: ($height * abs($deg - 1)) $width ($height * $deg) 0;
+  }
 }

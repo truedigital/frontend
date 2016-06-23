@@ -1,0 +1,34 @@
+---
+title: Colours
+sidebar: true
+fabricator: true
+page: colours
+notes: |
+    Colours are controlled via json/colors.json. A Sass map is also generated from this JSON file.
+
+    We use a colour palette to attribute meaning, make our systems stand out and provide consistency. Each of our systems should fit into this colour palette.
+---
+
+<section class="section">
+
+    <div class="sg-colors">
+        {{#each colors}}
+            {{#each this}}
+                <div class="sg-colors__block">
+
+                    <div class="sg-colors__sample" style="background-color: {{this}}">
+                        <div class="sg-colors__block--center">
+                            <span class="sg-colors__hex">{{this}}</span>
+                        </div>
+                    </div>
+
+                    <div class="sg-colors__usage">
+                        <code>palette({{@../key}}, {{@key}})</code>
+                    </div>
+
+                </div>
+            {{/each}}
+        {{/each}}
+    </div>
+
+</section>

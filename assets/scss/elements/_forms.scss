@@ -147,12 +147,12 @@ fieldset {
     & .btn-select {
         position: relative;
         display: inline-block;
-        @extend %base-form-element;
+        // @extends base-form-element;
         padding-top: 12px;
 
         &:after {
             content: '';
-            @include triangle (14px, #fff, down);
+            @include triangle(#fff, 14px, 14px, bottom);
             position: absolute;
             top: 50%;
             right: 11px;
