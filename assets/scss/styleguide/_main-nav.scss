@@ -1,0 +1,167 @@
+
+.main-nav__wrap {
+    height: 100%;
+    background-color: #ffb736;
+
+    @include mq($until: tablet){
+        height: 100vh;
+        display: none;
+    }
+
+    @include mq(tablet){
+        display: block !important;
+    }
+}
+
+.main-nav {
+    text-align: left;
+    padding: 0 30px 40px;
+    overflow-y: auto;
+    max-height: 100vh;
+
+    @include mq(tablet){
+        display: block;
+    }
+
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: Roboto;
+        font-weight: bold;
+        @include font-size(14);
+        padding: 16px 10px;
+        display: block;
+        position: relative;
+
+        &.is-active {
+            color: red;
+        }
+
+        &:before {
+            content: '';
+            width: 3px;
+            height: 20px;
+            background: #8c8279;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin: -10px 0 0 0;
+            display: none;
+        }
+
+        @include mq(tablet){
+            @include font-size(12);
+        }
+    }
+
+    .icon--arrow {
+        float: right;
+        transition: all 250ms;
+    }
+}
+
+
+.main-nav__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav__primary {
+
+    &.is-active {
+        .icon--arrow {
+            transform: rotateX(-180deg);
+        }
+    }
+}
+
+// SECOND LEVEL
+.main-nav__dropdown {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.main-nav__secondary {
+    a {
+        text-transform: none;
+        font-weight: normal;
+        padding: 10px 10px 10px 30px;
+        @include font-size(14);
+        &:before {
+            left: 20px;
+        }
+        @include mq(tablet){
+            @include font-size(13);
+        }
+    }
+}
+
+
+
+// === NAV SELECTED STATE
+
+$pages: (
+    intro,
+    principles,
+    colours,
+    typography,
+    accordions,
+    alerts,
+    breadcrumbs,
+    contextual-links,
+    data-formats,
+    dialog-boxes,
+    progress-bars,
+    loading,
+    search,
+    sliders,
+    tables,
+    tooltips,
+    buttons,
+    dropdowns,
+    pagination,
+    tabs,
+    form-principles,
+    form-structure,
+    input-fields,
+    textarea,
+    checkboxes,
+    radio-buttons,
+    date-picker,
+    file-upload,
+    validation
+);
+
+@each $page in $pages {
+    body[data-page="#{$page}"] .main-nav [data-nav="#{$page}"] a {
+        color: #8c8279;
+        &:before {
+            display: inline-block;
+        }
+    }
+}
+
+
+
+// === NAV TOGGLE
+.nav-toggle {
+    display: none;
+
+    @include mq($until: tablet){
+        display: inline-block;
+        float: left;
+        @include font-size(18);
+        font-family: NewsGothic;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 20px 0;
+    }
+}
+
+
+

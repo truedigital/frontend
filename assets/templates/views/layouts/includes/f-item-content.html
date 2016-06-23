@@ -1,0 +1,30 @@
+{{#if notes}}
+<div class="styleguide-item__notes">
+    {{{notes}}}
+</div>
+{{/if}}
+<div class="pattern" data-tabs data-tabs-active="0">
+    <ul class="pattern-nav" data-tab-nav>
+        <li class="pattern-nav__tab" data-tab>Preview</li>
+        <li class="pattern-nav__tab" data-tab>Markup</li>
+    </ul>
+    <div class="pattern__panes" data-tab-panes>
+        <div class="pattern-preview" data-tab-pane data-markup-source>
+            {{{material @key @root}}}
+        </div>
+        <div class="pattern-markup" data-tab-pane>
+            <div class="pattern-markup__copy" data-markup-copy><svg class="icon icon--copy"><use xlink:href="#copy"></use></svg></div>
+            <div class="pattern-markup__content" data-markup>
+                <pre><code>{{material @key @root}}</code></pre>
+            </div>
+        </div>
+        <!-- end pattern-markup -->
+    </div>
+</div>
+
+<!-- <div class="styleguide-item__preview">
+
+</div>
+<div class="styleguide-item__code">
+
+</div> -->

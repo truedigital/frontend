@@ -23,21 +23,32 @@ module.exports =
 
         js: {
             source: path.join(_baseDir, '/js'),
-            partials: path.join(_baseDir, '/js/partials'),
+            partials: path.join(_baseDir, '/js/partials/**'),
+            styleguideJs: path.join(_baseDir, '/js/styleguide/**'),
             vendor: path.join(_baseDir, '/js/vendor'),
             scripts: path.join(_baseDir, '/js/scripts'),
         },
 
+        json: {
+            source: path.join(_baseDir, '/json'),
+            files: path.join(_baseDir, '/json/*.json'),
+        },
+
         templates: {
-            source: path.join(_baseDir, '/templates'),
-            files: path.join(_baseDir, '/templates/*.tpl'),
-            partials: path.join(_baseDir, '/templates/partials/**'),
-            destination: path.join(_baseDir, '/html'),
+            allFiles: path.join(_baseDir, '/templates/**'),
+            data: path.join(_baseDir, '/templates/data'),
+            docs: path.join(_baseDir, '/templates/docs'),
+            materials: path.join(_baseDir, '/templates/materials'),
+            views: path.join(_baseDir, '/templates/views'),
+            layouts: path.join(_baseDir, '/templates/views/layouts'),
+            layoutIncludes: path.join(_baseDir, '/templates/views/layouts/includes'),
+            dest: path.join(_baseDir, '/html'),
         },
 
         svg: {
             source: path.join(_baseDir, '/svg'),
             files: path.join(_baseDir, '/svg/icons/*.svg'),
+            symbols: path.join(_baseDir, '/svg/symbol/svg/sprite.symbol.svg'),
         },
 
         images: path.join(_baseDir, '/images'),

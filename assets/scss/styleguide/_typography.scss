@@ -1,0 +1,105 @@
+
+
+.type-example {
+    &:not(:last-child){
+        margin-bottom: 40px;
+    }
+
+    &--headings {
+        margin-top: 40px;
+    }
+
+    [data-heading]{
+        @include font-size(14,22);
+        margin-bottom: 10px;
+    }
+}
+
+
+.type-example__text {
+
+    &--caps {
+        text-transform: uppercase;
+    }
+
+
+    .type-example--headings & {
+        @include font-size(30,40);
+    }
+
+    .type-example--subheadings & {
+        @include font-size(20,40);
+    }
+
+    .type-example--body & {
+        @include font-size(20,40);
+    }
+
+    @include mq(tablet){
+        .type-example--headings & {
+            @include font-size(40,50);
+        }
+
+        .type-example--subheadings & {
+            @include font-size(30,40);
+        }
+
+        .type-example--body & {
+            @include font-size(30,40);
+        }
+    }
+
+
+    @include mq(desktop){
+        .type-example--headings & {
+            @include font-size(50,60);
+        }
+
+        .type-example--subheadings & {
+            @include font-size(40,50);
+        }
+
+        .type-example--body & {
+            @include font-size(40,50);
+        }
+    }
+
+
+
+}
+
+
+
+.section--primary-typeface {
+    .type-example--headings .type-example__text {
+        font-weight: bold;
+    }
+    .type-example--subheadings .type-example__text {
+        font-weight: 700;
+    }
+    .type-example--body .type-example__text {
+        font-weight: 500;
+    }
+}
+
+.section--secondary-typeface {
+    .type-example__text {
+        font-family: arial;
+    }
+    .type-example--headings .type-example__text {
+        font-family: 'arial narrow', arial;
+        font-weight: bold;
+    }
+    .type-example--subheadings .type-example__text {
+        font-weight: bold;
+    }
+
+}
+
+
+
+
+
+
+
+

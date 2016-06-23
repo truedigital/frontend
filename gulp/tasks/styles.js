@@ -5,7 +5,7 @@
 // If you comment in sourcemaps and comment out autoprefixer. maps work fine.
 // I think autoprefixer wins over sourcemaps, so it's being used by default.
 
-module.exports = function(gulp, gutil, plugins, browserSync){
+module.exports = function(gulp, gutil, plugins, browserSync, jsonSass, source){
 
     var env = require('../settings/config').environment.production,
         path = require('../settings/paths'),
@@ -18,7 +18,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
 
     gulp.task('styles', function() {
 
-        return gulp.src(path.to.scss.source + '/style.scss')
+        return gulp.src(path.to.scss.source + '/*.scss')
 
             // init sourcemaps
             .pipe(plugins.sourcemaps.init({debug: env.sourceMap}))
@@ -59,8 +59,8 @@ module.exports = function(gulp, gutil, plugins, browserSync){
             .pipe(plugins.filter('**/*.css'), browserSync.reload({stream:true}))
 
             // Minify
-            .pipe(env.local ? plugins.cleanCss() : gutil.noop() )
-            .pipe(env.local ? plugins.rename('style.min.css') : gutil.noop() )
+            .pipe(env.local ? plugins.minifyCss() : gutil.noop() )
+            .pipe(env.local ? plugins.rename({ suffix: '.min' }) : gutil.noop() )
             .pipe(env.local ? gulp.dest(path.to.css.source) : gutil.noop() )
             .pipe(plugins.size({ showFiles: false, gzip: true, title: env.name + ' styles'}))
 

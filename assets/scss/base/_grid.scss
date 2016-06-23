@@ -45,7 +45,7 @@
 // === GRID ELEMENTS
 // Sets individual items to grid
 
-@include mq(tablet-small){
+@include mq(tablet){
     // QUARTER
     [data-columns~="1/4"] {
         @include span(3);

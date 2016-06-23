@@ -24,7 +24,7 @@ module.exports = function(gulp, gutil, plugins, browserSync){
 
             .pipe( env.local ? plugins.uglify({ preserveComments: 'some' }) : gutil.noop() )
             .on('error', error.handleError)
-            .pipe( env.local ? plugins.rename('scripts.min.js') : gutil.noop() )
+            .pipe( env.local ? plugins.rename({ suffix: '.min' }) : gutil.noop() )
             .pipe( env.local ? gulp.dest(path.to.js.source) : gutil.noop() )
             .pipe(browserSync.reload({stream:true, once: true}))
 

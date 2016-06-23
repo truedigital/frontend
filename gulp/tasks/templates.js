@@ -1,21 +1,36 @@
 // === TEMPLATES
 // ============================================================================
 
-module.exports = function(gulp, gutil, plugins, browserSync){
+module.exports = function(gulp, gutil, plugins, browserSync, assemble){
 
-    var path = require('../settings/paths'),
+    var env = require('../settings/config').environment.production,
+        path = require('../settings/paths'),
         error = require('../settings/error-handler');
 
-    gulp.task('templates', function() {
-        return gulp.src(path.to.templates.files)
-            .pipe(plugins.fileInclude({
-                prefix: '@@',
-                basepath: '@file'
-            })).on('error', error.handleError)
-            .pipe(plugins.rename({ extname: '.html' }))
-            .pipe(gulp.dest(path.to.templates.destination));
-            browserSync.reload();
-            browserSync.notify('Template updated');
+    if ( gutil.env.dev === true ) {
+        env = require('../settings/config').environment.development
+    }
+
+    gulp.task('templates', function (done) {
+
+      assemble({
+        layouts: path.to.templates.layouts + '/*',
+        layoutIncludes: path.to.templates.layoutIncludes + '/*',
+        views: [path.to.templates.views + '/**/*',  '!' + path.to.templates.views + '/+(layouts)/**'],
+        materials: path.to.templates.materials + '/**/*',
+        data: [path.to.templates.data + '/**/*.{json,yml}', path.to.json.source + '/colors.json'],
+        docs: path.to.templates.docs + '/**/*.md',
+        dest: path.to.templates.dest,
+        helpers: {
+            markdown: require('helper-markdown'),
+            svgSymbols: require('../../assets/templates/helpers/svgSymbols.js'),
+            json: require('../../assets/templates/helpers/json.js'),
+            toLowerCase: require('../../assets/templates/helpers/toLowerCase.js')
+        }
+      });
+
+      done();
+
     });
 
 };

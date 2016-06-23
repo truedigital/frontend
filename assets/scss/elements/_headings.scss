@@ -28,7 +28,7 @@
         margin: $base-line-height 0 $base-line-height/2;
     }
 
-    @include mq($from: tablet-small){
+    @include mq($from: tablet){
         &--xlarge {
             @include font-size(80,95);
             // font-family: $font--adelle;

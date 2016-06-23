@@ -7,13 +7,11 @@
 $mq-breakpoints: (
     mobile:  320px,
     mobile-large: 480px,
-    tablet-small: 740px,
-    tablet:  980px,
+    tablet: 740px,
+    tablet-large:  980px,
     desktop: 1030px,
     wide:    1300px
 );
 
 // Breakpoints in list will be displayed top right
-@if $environment == 'dev' {
-    $mq-show-breakpoints: (mobile, mobile-large, tablet-small, tablet, desktop, wide);
-}
+$mq-show-breakpoints: (mobile, mobile-large, tablet, tablet-large, desktop, wide);

@@ -15,3 +15,11 @@ ul, ol {
         padding: 0;
     }
 }
+
+// === INLINE
+.list--inline {
+  @include clear;
+  @include mq(tablet) {
+    li {float: left;}
+  }
+}

@@ -1,0 +1,19 @@
+---
+title: Docs
+sidebar: true
+fabricator: true
+page: docs
+---
+
+<section class="section">
+
+    {{#each docs}}
+
+    	<div class="f-item-group">
+    		<h2 id="{{@key}}"><a href="#{{@key}}">{{name}}</a></h2>
+    		{{{content}}}
+    	</div>
+
+    {{/each}}
+
+</section>

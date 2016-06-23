@@ -1,0 +1,61 @@
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+}
+
+main.site {
+    overflow: hidden;
+    padding: 65px 20px 60px;
+
+
+    @include mq(tablet){
+        margin-left: 240px;
+        padding: 0 40px 60px;
+    }
+    @include mq(tablet-large){
+        margin-left: 280px;
+        padding: 0 60px 60px;
+    }
+}
+
+
+.section {
+    margin-bottom: 26px;
+    padding: 0 8px 40px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #e8e6e4;
+    }
+
+    &--intro {
+
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+        & [data-heading] {
+            text-transform: capitalize;
+        }
+
+        @include mq(tablet-large){
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+.allow-overflow {
+    overflow: visible !important;
+}
+
+
+
+
+
+
+
+
