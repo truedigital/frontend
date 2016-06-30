@@ -1,0 +1,15 @@
+
+// === ATTRIBUTE MIXIN
+
+@mixin attr($module, $modifier: null) {
+    @if $modifier != null {
+        [data-#{$module}~="#{$modifier}"] {
+            @content;
+        }
+    }
+    @else {
+        [data-#{$module}] {
+            @content;
+        }
+    }
+}

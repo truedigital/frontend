@@ -20,12 +20,12 @@ module.exports = function(gulp, gutil, plugins, browserSync){
             .pipe(plugins.concat('scripts.js'))
             .on('error', error.handleError)
             .pipe(plugins.sourcemaps.write())
-            .pipe(gulp.dest(path.to.js.source))
+            .pipe(gulp.dest(path.to.dist.js))
 
             .pipe( env.local ? plugins.uglify({ preserveComments: 'some' }) : gutil.noop() )
             .on('error', error.handleError)
             .pipe( env.local ? plugins.rename({ suffix: '.min' }) : gutil.noop() )
-            .pipe( env.local ? gulp.dest(path.to.js.source) : gutil.noop() )
+            .pipe( env.local ? gulp.dest(path.to.dist.js) : gutil.noop() )
             .pipe(browserSync.reload({stream:true, once: true}))
 
     });
