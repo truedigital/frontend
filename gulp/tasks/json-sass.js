@@ -11,13 +11,13 @@ module.exports = function(gulp, gutil, plugins, jsonSass, fs, source){
     gulp.task('json-sass', function() {
 
         // Convert the JSON colors to a sass-map
-        return fs.createReadStream('./assets/json/colors.json')
+        return fs.createReadStream('./src/json/colors.json')
             .pipe(jsonSass({
               prefix: '$palettes: ',
             }))
-            .pipe(source('./assets/json/colors.json'))
+            .pipe(source('./src/json/colors.json'))
             .pipe(plugins.rename('_colors.scss'))
-            .pipe(gulp.dest('./assets/scss/base'));
+            .pipe(gulp.dest('./src/scss/base'));
 
     });
 

@@ -1,0 +1,40 @@
+
+.table {
+    margin-top: $base-line-height * 1.5;
+    margin-bottom: $base-line-height * 1.5;
+    max-width: 100%;
+    width: 100% !important;
+    border: 1px solid #ccc;
+
+    th, td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    th {
+        background: #eee;
+        font-weight: bold;
+        @include font-size(16);
+        text-align: left;
+        border: 1px solid #ccc;
+    }
+
+    tr {
+        &:first-child {
+            & td, & th {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        &:last-child {
+            & td { border-bottom: 0; }
+        }
+    }
+
+    td {
+        border-bottom: 1px solid #ccc;
+    }
+
+}

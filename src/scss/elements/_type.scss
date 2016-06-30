@@ -1,0 +1,9 @@
+// BASE TYPE SETTINGS
+$base-font-size: 16px; // used for rem @font-size mixin
+$em-base: 16px !default;
+
+body {
+    font-family: $base-font;
+    font-size: $base-font-size;
+    line-height: 1.4;
+}
