@@ -27,6 +27,13 @@ module.exports =
                 example: true
             }
         }
+    },
+
+    kraken: {
+        key: '',
+        secret: '',
+        lossy: true,
+        concurrency: 10
     }
 
 };

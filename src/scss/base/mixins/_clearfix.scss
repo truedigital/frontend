@@ -1,0 +1,9 @@
+@mixin clear() {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// http://cssmojo.com/latest_new_clearfix_so_far

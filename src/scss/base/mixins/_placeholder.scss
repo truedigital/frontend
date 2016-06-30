@@ -1,0 +1,18 @@
+
+
+// Apply styles for HTML5 form element placeholders
+//
+// @param {CSS} @content - CSS
+//
+// @example @include placeholder{ @content }
+
+@mixin placeholder {
+    $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+    @each $placeholder in $placeholders {
+        &:#{$placeholder}-placeholder {
+            @content;
+        }
+    }
+}
+
+

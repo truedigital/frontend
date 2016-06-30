@@ -28,6 +28,7 @@ var plugins = require("gulp-load-plugins")({
 // ==============================================================================
 require('./gulp/tasks/json-sass')(gulp, gutil, plugins, jsonSass, fs, source);
 require('./gulp/tasks/styles')(gulp, gutil, plugins, browserSync, jsonSass, source);
+require('./gulp/tasks/images')(gulp, plugins, browserSync);
 require('./gulp/tasks/scripts')(gulp, gutil, plugins, browserSync);
 require('./gulp/tasks/styleguide')(gulp, gutil, plugins, browserSync);
 require('./gulp/tasks/templates')(gulp, gutil, plugins, browserSync, assemble);
@@ -59,6 +60,7 @@ function watchFiles(){
     gulp.watch(path.to.scss.files, ['styles']);
     gulp.watch(path.to.json.files, ['json-sass']);
     gulp.watch(path.to.js.partials, ['scripts']);
+    gulp.watch(path.to.images.source, ['images']);
     gulp.watch(path.to.js.styleguideJs, ['styleguide-scripts']);
     gulp.watch(path.to.templates.allFiles, ['templates', browserSync.reload]);
     gulp.watch(path.to.svg.files, ['sprites', browserSync.reload]);

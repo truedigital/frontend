@@ -1,0 +1,25 @@
+
+// === DEFAULT
+ul, ol {
+    padding-left: 20px;
+}
+
+
+// === RESET
+.list--reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// === INLINE
+.list--inline {
+  @include clear;
+  @include mq(tablet) {
+    li {float: left;}
+  }
+}

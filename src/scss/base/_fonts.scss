@@ -1,0 +1,18 @@
+
+@include font-face(NewsGothic, "../fonts/NewsGothicBT/news_gothic_condensed_bt", normal, normal);
+@include font-face(NewsGothic, "../fonts/NewsGothicBT/news_gothic_bold_condensed_bt", bold, normal);
+
+@include font-face(NewsGothic, "../fonts/NewsGothicMT/news_gothic_mt", 500, normal);
+@include font-face(NewsGothic, "../fonts/NewsGothicMT/news_gothic_mt_bold", 700, normal);
+
+@include font-face(Roboto, "../fonts/Roboto/roboto-regular", regular, normal);
+@include font-face(Roboto, "../fonts/Roboto/roboto-medium", 500, normal);
+@include font-face(Roboto, "../fonts/Roboto/roboto-bold", bold, normal);
+@include font-face(Roboto, "../fonts/Roboto/roboto-black", 900, normal);
+
+
+$base-font: 'Roboto';
+
+body {
+    font-family: $base-font;
+}

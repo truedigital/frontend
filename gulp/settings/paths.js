@@ -2,7 +2,8 @@
 // ============================================================================
 
 var path = require('path'),
-    _baseDir  = './assets';
+    _baseDir  = './src',
+    _distDir = './dist';
 
 module.exports =
 {
@@ -10,6 +11,16 @@ module.exports =
     to: {
 
         allFiles: path.join(_baseDir, '/**/**.**'),
+
+        dist: {
+            css: path.join(_distDir, '/css'),
+            js: path.join(_distDir, '/js'),
+            images: path.join(_distDir, '/images')
+        },
+
+        images: {
+            source: path.join(_baseDir, '/images/**/*')
+        },
 
         css: {
             source: path.join(_baseDir, '/css'),
@@ -50,8 +61,6 @@ module.exports =
             files: path.join(_baseDir, '/svg/icons/*.svg'),
             symbols: path.join(_baseDir, '/svg/symbol/svg/sprite.symbol.svg'),
         },
-
-        images: path.join(_baseDir, '/images'),
 
     }
 
