@@ -5,11 +5,11 @@ npm-debug.log
 node_modules/
 
 # Generated Files
-assets/html/*
-assets/js/*.js
-assets/js/*.min.js
-assets/css/*.css
-assets/css/*.css.map
+src/html/*
+dist/js/*.js
+dist/js/*.min.js
+dist/css/*.css
+dist/css/*.css.map
 
 # Vim temps
 *~
