@@ -11,10 +11,15 @@ module.exports = function(gulp, plugins, browserSync) {
 
     browserSync.notify('Running image optimisations');
 
-    return gulp.src(path.to.images.source)
+    var imageStream = gulp.src(path.to.images.source)
       .pipe(plugins.changed(path.to.dist.images))
-      .pipe(gulp.dest(path.to.dist.images))
-      .pipe(plugins.kraken(krakenConfig));
+      .pipe(gulp.dest(path.to.dist.images));
+
+    if (krakenConfig.secret !== '' && krakenConfig.key !== '') {
+      return imageStream.pipe(plugins.kraken(krakenConfig));
+    } else {
+      return imageStream;
+    }
   });
 
 };
