@@ -9,6 +9,7 @@ Pulled together by Curtis Wist and Craig Coles and is a starting point for many 
 3. [Structure](#structure)
     1. [Sass](#sass)
     2. [Javascript](#javascript)
+    3. [Image Optimisation](#image-optimisation)
 4. [Contributing](#contributing)
 5. [Changelog](#changelog)
 
@@ -41,8 +42,11 @@ Pulled together by Curtis Wist and Craig Coles and is a starting point for many 
 ## Structure
 
 ```
-├── assets/
+├── dist/
 │   ├── css/
+│   ├── images/
+│   └── js/
+├── src/
 │   ├── fonts/
 │   ├── html/
 │   ├── images/
@@ -57,6 +61,7 @@ Pulled together by Curtis Wist and Craig Coles and is a starting point for many 
 │       └── paths.js
 │   ├── tasks/
 │       ├── browser-sync.js
+│       ├── images.js
 │       ├── modernizr.js
 │       ├── scripts.js
 │       ├── sprites.js
@@ -143,6 +148,19 @@ The best place to start is styles.scss. You can see what files are included, the
   - `modernizr.js` : This is a development version of Modernizr
 
   - `modernizr-custom.js` : Generated using the build command. Contents of this file is dependant on the code that you write for your project.
+
+#### Image Optimisation
+Image optimisation through [kraken.io](http://kraken.io) is supported once `config.kraken` is populated with valid premium credentials. Images are only copied/reoptimised when modified.
+
+```
+├── src/
+│   └── images/
+├── dist/
+│   └── images/
+```
+
+- `src/images` : Contains all static source images used in the design for your project
+- `dist/images` : Contains optimised copies of images from `src/images` if `config.kraken` is populated or straight copies if not
 
 ## Contributing
 
