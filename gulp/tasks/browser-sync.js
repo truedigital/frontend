@@ -28,7 +28,7 @@ module.exports = function(gulp, browserSync){
                 forms: true,
                 scroll: true
             },
-            startPath: "assets/html/index.html",
+            startPath: "src/html/index.html",
             open: true,
             logPrefix: "Tru"
         });

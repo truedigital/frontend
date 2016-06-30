@@ -23,9 +23,9 @@ module.exports = function(gulp, gutil, plugins, browserSync, assemble){
         dest: path.to.templates.dest,
         helpers: {
             markdown: require('helper-markdown'),
-            svgSymbols: require('../../assets/templates/helpers/svgSymbols.js'),
-            json: require('../../assets/templates/helpers/json.js'),
-            toLowerCase: require('../../assets/templates/helpers/toLowerCase.js')
+            svgSymbols: require('../../src/templates/helpers/svgSymbols.js'),
+            json: require('../../src/templates/helpers/json.js'),
+            toLowerCase: require('../../src/templates/helpers/toLowerCase.js')
         }
       });
 

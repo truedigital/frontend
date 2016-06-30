@@ -63,7 +63,7 @@
   src: url("../fonts/Roboto/roboto-black.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-black.woff2") format("woff2"), url("../fonts/Roboto/roboto-black.woff") format("woff"), url("../fonts/Roboto/roboto-black.ttf") format("truetype");
 }
 
-/* line 16, D:/Non-client/frontend/assets/scss/base/_fonts.scss */
+/* line 16, D:/Non-client/frontend/src/scss/base/_fonts.scss */
 body {
   font-family: "Roboto";
 }
@@ -73,7 +73,7 @@ body {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 7, D:/Non-client/frontend/assets/scss/base/normalize/base/_html.scss */
+/* line 7, D:/Non-client/frontend/src/scss/base/normalize/base/_html.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -86,7 +86,7 @@ html {
 /**
  * Remove default margin.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/base/_body.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/base/_body.scss */
 body {
   margin: 0;
 }
@@ -96,7 +96,7 @@ body {
  * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 7, D:/Non-client/frontend/assets/scss/base/normalize/html5/_blocks.scss */
+/* line 7, D:/Non-client/frontend/src/scss/base/normalize/html5/_blocks.scss */
 article,
 aside,
 details,
@@ -116,7 +116,7 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 6, D:/Non-client/frontend/assets/scss/base/normalize/html5/_inline-blocks.scss */
+/* line 6, D:/Non-client/frontend/src/scss/base/normalize/html5/_inline-blocks.scss */
 audio,
 canvas,
 progress,
@@ -131,7 +131,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 6, D:/Non-client/frontend/assets/scss/base/normalize/html5/_audio.scss */
+/* line 6, D:/Non-client/frontend/src/scss/base/normalize/html5/_audio.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -141,7 +141,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-/* line 6, D:/Non-client/frontend/assets/scss/base/normalize/html5/_hidden.scss */
+/* line 6, D:/Non-client/frontend/src/scss/base/normalize/html5/_hidden.scss */
 [hidden],
 template {
   display: none;
@@ -150,7 +150,7 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/links/_fix-background.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/links/_fix-background.scss */
 a {
   background: transparent;
 }
@@ -158,7 +158,7 @@ a {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/links/_fix-outline.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/links/_fix-outline.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -167,7 +167,7 @@ a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/text-level/_abbr.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/text-level/_abbr.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -175,7 +175,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/text-level/_fix-bolder.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/text-level/_fix-bolder.scss */
 b,
 strong {
   font-weight: bold;
@@ -184,7 +184,7 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/text-level/_dfn.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/text-level/_dfn.scss */
 dfn {
   font-style: italic;
 }
@@ -193,7 +193,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-/* line 6, D:/Non-client/frontend/assets/scss/base/normalize/text-level/_headings.scss */
+/* line 6, D:/Non-client/frontend/src/scss/base/normalize/text-level/_headings.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -202,7 +202,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/text-level/_mark.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/text-level/_mark.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -211,7 +211,7 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/text-level/_small.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/text-level/_small.scss */
 small {
   font-size: 80%;
 }
@@ -219,7 +219,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/text-level/_sub-and-sup.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/text-level/_sub-and-sup.scss */
 sub,
 sup {
   font-size: 75%;
@@ -228,22 +228,22 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 13, D:/Non-client/frontend/assets/scss/base/normalize/text-level/_sub-and-sup.scss */
+/* line 13, D:/Non-client/frontend/src/scss/base/normalize/text-level/_sub-and-sup.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 17, D:/Non-client/frontend/assets/scss/base/normalize/text-level/_sub-and-sup.scss */
+/* line 17, D:/Non-client/frontend/src/scss/base/normalize/text-level/_sub-and-sup.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 4, D:/Non-client/frontend/assets/scss/base/normalize/embed/_img.scss */
+/* line 4, D:/Non-client/frontend/src/scss/base/normalize/embed/_img.scss */
 img {
   border: 0;
 }
 
-/* line 11, D:/Non-client/frontend/assets/scss/base/normalize/embed/_img.scss */
+/* line 11, D:/Non-client/frontend/src/scss/base/normalize/embed/_img.scss */
 .image--static {
   width: auto;
   height: auto;
@@ -251,7 +251,7 @@ img {
   max-height: auto;
 }
 
-/* line 18, D:/Non-client/frontend/assets/scss/base/normalize/embed/_img.scss */
+/* line 18, D:/Non-client/frontend/src/scss/base/normalize/embed/_img.scss */
 .image--expand {
   width: 100%;
   max-width: auto;
@@ -260,7 +260,7 @@ img {
 /**
  * Correct overflow not hidden in IE 8/9/10/11.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/embed/_svg.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/embed/_svg.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -268,7 +268,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/grouping/_figure.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/grouping/_figure.scss */
 figure {
   margin: 1em 40px;
 }
@@ -276,7 +276,7 @@ figure {
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/grouping/_hr.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/grouping/_hr.scss */
 hr {
   box-sizing: content-box;
   height: 0;
@@ -285,7 +285,7 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/grouping/_pre.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/grouping/_pre.scss */
 pre {
   overflow: auto;
 }
@@ -293,7 +293,7 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/grouping/_fix-monospace.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/grouping/_fix-monospace.scss */
 code,
 kbd,
 pre,
@@ -308,7 +308,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 8, D:/Non-client/frontend/assets/scss/base/normalize/forms/_fix-font.scss */
+/* line 8, D:/Non-client/frontend/src/scss/base/normalize/forms/_fix-font.scss */
 button,
 input,
 optgroup,
@@ -325,7 +325,7 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/forms/_fix-overflow.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/forms/_fix-overflow.scss */
 button {
   overflow: visible;
 }
@@ -336,7 +336,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 8, D:/Non-client/frontend/assets/scss/base/normalize/forms/_fix-text-transform.scss */
+/* line 8, D:/Non-client/frontend/src/scss/base/normalize/forms/_fix-text-transform.scss */
 button,
 select {
   text-transform: none;
@@ -349,7 +349,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 9, D:/Non-client/frontend/assets/scss/base/normalize/forms/_buttons.scss */
+/* line 9, D:/Non-client/frontend/src/scss/base/normalize/forms/_buttons.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -363,7 +363,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/forms/_disabled.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/forms/_disabled.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -372,7 +372,7 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/forms/_fix-focus-inner.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/forms/_fix-focus-inner.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -383,7 +383,7 @@ input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 6, D:/Non-client/frontend/assets/scss/base/normalize/forms/_fix-line-height.scss */
+/* line 6, D:/Non-client/frontend/src/scss/base/normalize/forms/_fix-line-height.scss */
 input {
   line-height: normal;
 }
@@ -395,7 +395,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 9, D:/Non-client/frontend/assets/scss/base/normalize/forms/_checkbox-and-radio.scss */
+/* line 9, D:/Non-client/frontend/src/scss/base/normalize/forms/_checkbox-and-radio.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -409,7 +409,7 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 7, D:/Non-client/frontend/assets/scss/base/normalize/forms/_number.scss */
+/* line 7, D:/Non-client/frontend/src/scss/base/normalize/forms/_number.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -420,7 +420,7 @@ input[type="number"]::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 7, D:/Non-client/frontend/assets/scss/base/normalize/forms/_search.scss */
+/* line 7, D:/Non-client/frontend/src/scss/base/normalize/forms/_search.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -433,7 +433,7 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 20, D:/Non-client/frontend/assets/scss/base/normalize/forms/_search.scss */
+/* line 20, D:/Non-client/frontend/src/scss/base/normalize/forms/_search.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -442,7 +442,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/forms/_fieldset.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/forms/_fieldset.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -453,7 +453,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 6, D:/Non-client/frontend/assets/scss/base/normalize/forms/_legend.scss */
+/* line 6, D:/Non-client/frontend/src/scss/base/normalize/forms/_legend.scss */
 legend {
   border: 0;
   /* 1 */
@@ -464,7 +464,7 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/forms/_textarea.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/forms/_textarea.scss */
 textarea {
   overflow: auto;
 }
@@ -473,7 +473,7 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 6, D:/Non-client/frontend/assets/scss/base/normalize/forms/_optgroup.scss */
+/* line 6, D:/Non-client/frontend/src/scss/base/normalize/forms/_optgroup.scss */
 optgroup {
   font-weight: bold;
 }
@@ -481,19 +481,19 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-/* line 5, D:/Non-client/frontend/assets/scss/base/normalize/tables/_fix-cell-spacing.scss */
+/* line 5, D:/Non-client/frontend/src/scss/base/normalize/tables/_fix-cell-spacing.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 10, D:/Non-client/frontend/assets/scss/base/normalize/tables/_fix-cell-spacing.scss */
+/* line 10, D:/Non-client/frontend/src/scss/base/normalize/tables/_fix-cell-spacing.scss */
 th,
 td {
   padding: 0;
 }
 
-/* line 157, D:/Non-client/frontend/assets/scss/base/mixins/_mq.scss */
+/* line 157, D:/Non-client/frontend/src/scss/base/mixins/_mq.scss */
 body:before {
   background-color: rgba(255, 56, 0, 0.8);
   border-top: 1px solid #ab2601;
@@ -509,48 +509,48 @@ body:before {
 }
 
 @media all and (min-width: 20em) {
-  /* line 157, D:/Non-client/frontend/assets/scss/base/mixins/_mq.scss */
+  /* line 157, D:/Non-client/frontend/src/scss/base/mixins/_mq.scss */
   body:before {
     content: "mobile ≥ 320px (20em)";
   }
 }
 
 @media all and (min-width: 30em) {
-  /* line 157, D:/Non-client/frontend/assets/scss/base/mixins/_mq.scss */
+  /* line 157, D:/Non-client/frontend/src/scss/base/mixins/_mq.scss */
   body:before {
     content: "mobile-large ≥ 480px (30em)";
   }
 }
 
 @media all and (min-width: 46.25em) {
-  /* line 157, D:/Non-client/frontend/assets/scss/base/mixins/_mq.scss */
+  /* line 157, D:/Non-client/frontend/src/scss/base/mixins/_mq.scss */
   body:before {
     content: "tablet ≥ 740px (46.25em)";
   }
 }
 
 @media all and (min-width: 61.25em) {
-  /* line 157, D:/Non-client/frontend/assets/scss/base/mixins/_mq.scss */
+  /* line 157, D:/Non-client/frontend/src/scss/base/mixins/_mq.scss */
   body:before {
     content: "tablet-large ≥ 980px (61.25em)";
   }
 }
 
 @media all and (min-width: 64.375em) {
-  /* line 157, D:/Non-client/frontend/assets/scss/base/mixins/_mq.scss */
+  /* line 157, D:/Non-client/frontend/src/scss/base/mixins/_mq.scss */
   body:before {
     content: "desktop ≥ 1030px (64.375em)";
   }
 }
 
 @media all and (min-width: 81.25em) {
-  /* line 157, D:/Non-client/frontend/assets/scss/base/mixins/_mq.scss */
+  /* line 157, D:/Non-client/frontend/src/scss/base/mixins/_mq.scss */
   body:before {
     content: "wide ≥ 1300px (81.25em)";
   }
 }
 
-/* line 11, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+/* line 11, D:/Non-client/frontend/src/scss/base/_grid.scss */
 .grid {
   max-width: 1140px;
   margin-left: auto;
@@ -559,68 +559,68 @@ body:before {
   padding: 0 20px;
 }
 
-/* line 12, D:/Non-client/frontend/assets/scss/base/susy/susy/output/support/_clearfix.scss */
+/* line 12, D:/Non-client/frontend/src/scss/base/susy/susy/output/support/_clearfix.scss */
 .grid:after {
   content: " ";
   display: block;
   clear: both;
 }
 
-/* line 29, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+/* line 29, D:/Non-client/frontend/src/scss/base/_grid.scss */
 [data-row] {
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
 
-/* line 2, D:/Non-client/frontend/assets/scss/base/mixins/_clearfix.scss */
+/* line 2, D:/Non-client/frontend/src/scss/base/mixins/_clearfix.scss */
 [data-row]:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 34, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+/* line 34, D:/Non-client/frontend/src/scss/base/_grid.scss */
 [data-row] > * {
   margin-bottom: 20px;
 }
 
-/* line 38, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+/* line 38, D:/Non-client/frontend/src/scss/base/_grid.scss */
 [data-row]:last-child {
   margin-bottom: 0;
 }
 
 @media all and (min-width: 46.25em) {
-  /* line 50, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+  /* line 50, D:/Non-client/frontend/src/scss/base/_grid.scss */
   [data-columns~="1/4"] {
     width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 61, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+  /* line 61, D:/Non-client/frontend/src/scss/base/_grid.scss */
   [data-columns~="1/3"] {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 72, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+  /* line 72, D:/Non-client/frontend/src/scss/base/_grid.scss */
   [data-columns~="1/2"] {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 86, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+  /* line 86, D:/Non-client/frontend/src/scss/base/_grid.scss */
   [data-columns~="2/3"] {
     width: 66.10169%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 98, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+  /* line 98, D:/Non-client/frontend/src/scss/base/_grid.scss */
   [data-columns~="3/4"] {
     width: 74.57627%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 110, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+  /* line 110, D:/Non-client/frontend/src/scss/base/_grid.scss */
   [data-columns~="full"] {
     clear: both;
     width: 100%;
@@ -628,17 +628,17 @@ body:before {
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 116, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+  /* line 116, D:/Non-client/frontend/src/scss/base/_grid.scss */
   [data-columns~="last"] {
     float: right;
     margin-right: 0;
   }
-  /* line 120, D:/Non-client/frontend/assets/scss/base/_grid.scss */
+  /* line 120, D:/Non-client/frontend/src/scss/base/_grid.scss */
   [data-columns~="container"] {
     float: none !important;
     margin: 0 !important;
   }
-  /* line 2, D:/Non-client/frontend/assets/scss/base/mixins/_clearfix.scss */
+  /* line 2, D:/Non-client/frontend/src/scss/base/mixins/_clearfix.scss */
   [data-columns~="container"]:after {
     content: "";
     display: table;
@@ -646,86 +646,86 @@ body:before {
   }
 }
 
-/* line 4, D:/Non-client/frontend/assets/scss/base/_base.scss */
+/* line 4, D:/Non-client/frontend/src/scss/base/_base.scss */
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
 
-/* line 10, D:/Non-client/frontend/assets/scss/base/_base.scss */
+/* line 10, D:/Non-client/frontend/src/scss/base/_base.scss */
 html {
   position: relative;
   height: 100%;
 }
 
-/* line 15, D:/Non-client/frontend/assets/scss/base/_base.scss */
+/* line 15, D:/Non-client/frontend/src/scss/base/_base.scss */
 body {
   min-width: 320px;
   margin: 0;
   padding: 0;
 }
 
-/* line 3, D:/Non-client/frontend/assets/scss/base/_helper-classes.scss */
+/* line 3, D:/Non-client/frontend/src/scss/base/_helper-classes.scss */
 .text--left {
   text-align: left;
 }
 
-/* line 6, D:/Non-client/frontend/assets/scss/base/_helper-classes.scss */
+/* line 6, D:/Non-client/frontend/src/scss/base/_helper-classes.scss */
 .text--right {
   text-align: right;
 }
 
-/* line 9, D:/Non-client/frontend/assets/scss/base/_helper-classes.scss */
+/* line 9, D:/Non-client/frontend/src/scss/base/_helper-classes.scss */
 .text--center {
   text-align: center;
 }
 
-/* line 12, D:/Non-client/frontend/assets/scss/base/_helper-classes.scss */
+/* line 12, D:/Non-client/frontend/src/scss/base/_helper-classes.scss */
 .text--justify {
   text-align: justify;
 }
 
-/* line 19, D:/Non-client/frontend/assets/scss/base/_helper-classes.scss */
+/* line 19, D:/Non-client/frontend/src/scss/base/_helper-classes.scss */
 .float--left {
   float: left;
 }
 
-/* line 22, D:/Non-client/frontend/assets/scss/base/_helper-classes.scss */
+/* line 22, D:/Non-client/frontend/src/scss/base/_helper-classes.scss */
 .float--right {
   float: right;
 }
 
-/* line 29, D:/Non-client/frontend/assets/scss/base/_helper-classes.scss */
+/* line 29, D:/Non-client/frontend/src/scss/base/_helper-classes.scss */
 .display--none {
   display: none;
 }
 
-/* line 32, D:/Non-client/frontend/assets/scss/base/_helper-classes.scss */
+/* line 32, D:/Non-client/frontend/src/scss/base/_helper-classes.scss */
 .display--block {
   display: block;
 }
 
-/* line 35, D:/Non-client/frontend/assets/scss/base/_helper-classes.scss */
+/* line 35, D:/Non-client/frontend/src/scss/base/_helper-classes.scss */
 .display--inline-block {
   display: inline-block;
 }
 
-/* line 38, D:/Non-client/frontend/assets/scss/base/_helper-classes.scss */
+/* line 38, D:/Non-client/frontend/src/scss/base/_helper-classes.scss */
 .display--flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 2, D:/Non-client/frontend/assets/scss/base/mixins/_clearfix.scss */
+/* line 2, D:/Non-client/frontend/src/scss/base/mixins/_clearfix.scss */
 .clear:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 2, D:/Non-client/frontend/assets/scss/elements/_buttons.scss */
+/* line 2, D:/Non-client/frontend/src/scss/elements/_buttons.scss */
 [data-button] {
   display: inline-block;
   color: #fff;
@@ -745,14 +745,14 @@ body {
   cursor: pointer;
 }
 
-/* line 15, D:/Non-client/frontend/assets/scss/elements/_buttons.scss */
+/* line 15, D:/Non-client/frontend/src/scss/elements/_buttons.scss */
 [data-button]:hover {
   color: #fff;
   background-image: -webkit-linear-gradient(#666, #999);
   background-image: linear-gradient(#666, #999);
 }
 
-/* line 22, D:/Non-client/frontend/assets/scss/elements/_buttons.scss */
+/* line 22, D:/Non-client/frontend/src/scss/elements/_buttons.scss */
 [data-button="dark"] {
   background-image: -webkit-linear-gradient(#666, #333);
   background-image: linear-gradient(#666, #333);
@@ -760,13 +760,13 @@ body {
   color: #fff;
 }
 
-/* line 26, D:/Non-client/frontend/assets/scss/elements/_buttons.scss */
+/* line 26, D:/Non-client/frontend/src/scss/elements/_buttons.scss */
 [data-button="dark"]:hover {
   background-image: -webkit-linear-gradient(#333, #666);
   background-image: linear-gradient(#333, #666);
 }
 
-/* line 31, D:/Non-client/frontend/assets/scss/elements/_buttons.scss */
+/* line 31, D:/Non-client/frontend/src/scss/elements/_buttons.scss */
 [data-button="light"] {
   background-image: -webkit-linear-gradient(#eee, #999);
   background-image: linear-gradient(#eee, #999);
@@ -774,31 +774,31 @@ body {
   color: #333;
 }
 
-/* line 35, D:/Non-client/frontend/assets/scss/elements/_buttons.scss */
+/* line 35, D:/Non-client/frontend/src/scss/elements/_buttons.scss */
 [data-button="light"]:hover {
   background-image: -webkit-linear-gradient(#999, #eee);
   background-image: linear-gradient(#999, #eee);
   color: currentColor;
 }
 
-/* line 7, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 7, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio {
   position: relative;
   overflow: hidden;
   margin-bottom: 5px;
 }
 
-/* line 12, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 12, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio--inline {
   display: inline-block;
 }
 
-/* line 16, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 16, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio input, .radio label {
   vertical-align: middle;
 }
 
-/* line 20, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 20, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio input {
   width: 20px;
   height: 20px;
@@ -807,17 +807,17 @@ body {
   margin-right: 0;
 }
 
-/* line 27, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 27, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio input:hover {
   cursor: pointer;
 }
 
-/* line 29, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 29, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio input:hover + label:before {
   border-width: 2px;
 }
 
-/* line 35, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 35, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio label {
   display: inline-block;
   padding-left: 10px;
@@ -828,7 +828,7 @@ body {
           user-select: none;
 }
 
-/* line 45, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 45, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio label:before {
   content: '';
   position: absolute;
@@ -848,7 +848,7 @@ body {
   background-color: inherit;
 }
 
-/* line 58, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 58, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio label:after {
   content: '';
   position: absolute;
@@ -857,13 +857,13 @@ body {
   margin-top: -2px;
 }
 
-/* line 70, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 70, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio input[type="radio"]:checked ~ label:before {
   background: #666;
   border-color: #666;
 }
 
-/* line 74, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 74, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .radio input[type="radio"]:checked ~ label:after {
   margin: 8px 0 0 5px;
   display: inline-block;
@@ -875,7 +875,7 @@ body {
           filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.2));
 }
 
-/* line 89, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 89, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox {
   position: relative;
   overflow: hidden;
@@ -884,17 +884,17 @@ body {
   margin-bottom: 10px;
 }
 
-/* line 96, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 96, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox--inline {
   display: inline-block;
 }
 
-/* line 100, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 100, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox input, .checkbox label {
   vertical-align: middle;
 }
 
-/* line 104, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 104, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox label {
   padding-left: 10px;
   -webkit-user-select: none;
@@ -903,7 +903,7 @@ body {
           user-select: none;
 }
 
-/* line 109, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 109, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox input {
   width: 20px;
   height: 20px;
@@ -913,22 +913,22 @@ body {
   opacity: 0;
 }
 
-/* line 116, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 116, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox input:hover {
   cursor: pointer;
 }
 
-/* line 118, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 118, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox input:hover + .form__checkbox-wrap {
   border: 3px solid #f399b5;
 }
 
-/* line 125, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 125, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox label:hover, .checkbox-wrap:hover {
   cursor: pointer;
 }
 
-/* line 128, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 128, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox__wrap {
   position: absolute;
   top: 50%;
@@ -945,7 +945,7 @@ body {
   height: 20px;
 }
 
-/* line 142, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 142, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox__wrap .icon {
   width: 0px;
   height: 0px;
@@ -957,7 +957,7 @@ body {
           transition: all 250ms;
 }
 
-/* line 156, D:/Non-client/frontend/assets/scss/elements/_forms-check.scss */
+/* line 156, D:/Non-client/frontend/src/scss/elements/_forms-check.scss */
 .checkbox input[type="checkbox"]:checked ~ .checkbox__wrap .icon {
   -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.2));
           filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.2));
@@ -969,7 +969,7 @@ body {
   fill: #333;
 }
 
-/* line 47, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 47, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -999,7 +999,7 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 24, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 24, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus,
@@ -1015,7 +1015,7 @@ textarea:focus {
   border-color: #999;
 }
 
-/* line 12, D:/Non-client/frontend/assets/scss/base/mixins/_placeholder.scss */
+/* line 12, D:/Non-client/frontend/src/scss/base/mixins/_placeholder.scss */
 input[type="text"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder,
 input[type="date"]::-webkit-input-placeholder,
@@ -1029,7 +1029,7 @@ textarea::-webkit-input-placeholder {
   font-family: "Roboto";
 }
 
-/* line 12, D:/Non-client/frontend/assets/scss/base/mixins/_placeholder.scss */
+/* line 12, D:/Non-client/frontend/src/scss/base/mixins/_placeholder.scss */
 input[type="text"]::-moz-placeholder,
 input[type="password"]::-moz-placeholder,
 input[type="date"]::-moz-placeholder,
@@ -1043,7 +1043,7 @@ textarea::-moz-placeholder {
   font-family: "Roboto";
 }
 
-/* line 12, D:/Non-client/frontend/assets/scss/base/mixins/_placeholder.scss */
+/* line 12, D:/Non-client/frontend/src/scss/base/mixins/_placeholder.scss */
 input[type="text"]:-moz-placeholder,
 input[type="password"]:-moz-placeholder,
 input[type="date"]:-moz-placeholder,
@@ -1057,7 +1057,7 @@ textarea:-moz-placeholder {
   font-family: "Roboto";
 }
 
-/* line 12, D:/Non-client/frontend/assets/scss/base/mixins/_placeholder.scss */
+/* line 12, D:/Non-client/frontend/src/scss/base/mixins/_placeholder.scss */
 input[type="text"]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
 input[type="date"]:-ms-input-placeholder,
@@ -1071,7 +1071,7 @@ textarea:-ms-input-placeholder {
   font-family: "Roboto";
 }
 
-/* line 36, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 36, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .form--inline input[type="text"], .form--inline
 input[type="password"], .form--inline
 input[type="date"], .form--inline
@@ -1084,7 +1084,7 @@ textarea {
   width: auto;
 }
 
-/* line 60, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 60, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 select {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -1102,73 +1102,73 @@ select {
           transition-property: color, background, border-color;
 }
 
-/* line 64, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 64, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 input[type="search"] {
   border-radius: 0;
 }
 
-/* line 68, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 68, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 textarea {
   min-height: 100px;
   vertical-align: bottom;
 }
 
-/* line 73, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 73, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 79, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 79, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .form-field {
   margin-bottom: 30px;
   display: block;
 }
 
-/* line 2, D:/Non-client/frontend/assets/scss/base/mixins/_clearfix.scss */
+/* line 2, D:/Non-client/frontend/src/scss/base/mixins/_clearfix.scss */
 .form-field:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 85, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 85, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .label--field {
   display: block;
   margin-bottom: 5px;
 }
 
-/* line 89, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 89, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .form--inline .label--field {
   float: left;
   width: 200px;
 }
 
-/* line 95, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 95, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .label--inline {
   display: inline-block;
 }
 
-/* line 100, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 100, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .checkbox,
 .radio {
   margin-right: 20px;
 }
 
-/* line 104, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 104, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .checkbox--block,
 .radio--block {
   display: block;
 }
 
-/* line 116, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 116, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .custom-select {
   position: relative;
   overflow: hidden;
 }
 
-/* line 120, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 120, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .custom-select select {
   position: absolute;
   top: 0;
@@ -1177,7 +1177,7 @@ fieldset {
   opacity: 0.001;
 }
 
-/* line 128, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 128, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .custom-select select,
 .custom-select .btn-select {
   background: #fff;
@@ -1201,20 +1201,20 @@ fieldset {
           transition-property: color, background, border-color;
 }
 
-/* line 137, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 137, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .form--inline .custom-select select, .form--inline
 .custom-select .btn-select {
   max-width: 300px;
 }
 
-/* line 147, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 147, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .custom-select .btn-select {
   position: relative;
   display: inline-block;
   padding-top: 12px;
 }
 
-/* line 153, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 153, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .custom-select .btn-select:after {
   content: '';
   display: block;
@@ -1231,7 +1231,7 @@ fieldset {
           filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.2));
 }
 
-/* line 163, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 163, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .custom-select .btn-select:before {
   content: " ";
   display: block;
@@ -1243,19 +1243,19 @@ fieldset {
   background-color: #ccc;
 }
 
-/* line 178, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 178, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .custom-select .label-text {
   padding: 0 1em .3em 0;
 }
 
-/* line 185, D:/Non-client/frontend/assets/scss/elements/_forms.scss */
+/* line 185, D:/Non-client/frontend/src/scss/elements/_forms.scss */
 .form-field--inline-selects .custom-select {
   display: inline-block;
   width: auto;
   padding-right: 10px;
 }
 
-/* line 1, D:/Non-client/frontend/assets/scss/elements/_headings.scss */
+/* line 1, D:/Non-client/frontend/src/scss/elements/_headings.scss */
 .heading {
   margin: 24px 0;
   font-weight: normal;
@@ -1265,7 +1265,7 @@ fieldset {
   line-height: 2.625rem;
 }
 
-/* line 9, D:/Non-client/frontend/assets/scss/elements/_headings.scss */
+/* line 9, D:/Non-client/frontend/src/scss/elements/_headings.scss */
 .heading--xlarge {
   font-size: 36px;
   font-size: 2.25rem;
@@ -1274,7 +1274,7 @@ fieldset {
   font-weight: bold;
 }
 
-/* line 16, D:/Non-client/frontend/assets/scss/elements/_headings.scss */
+/* line 16, D:/Non-client/frontend/src/scss/elements/_headings.scss */
 .heading--large {
   font-size: 32px;
   font-size: 2rem;
@@ -1283,7 +1283,7 @@ fieldset {
   font-weight: bold;
 }
 
-/* line 22, D:/Non-client/frontend/assets/scss/elements/_headings.scss */
+/* line 22, D:/Non-client/frontend/src/scss/elements/_headings.scss */
 .heading--small {
   font-size: 18px;
   font-size: 1.125rem;
@@ -1295,7 +1295,7 @@ fieldset {
 }
 
 @media all and (min-width: 46.25em) {
-  /* line 32, D:/Non-client/frontend/assets/scss/elements/_headings.scss */
+  /* line 32, D:/Non-client/frontend/src/scss/elements/_headings.scss */
   .heading--xlarge {
     font-size: 80px;
     font-size: 5rem;
@@ -1303,7 +1303,7 @@ fieldset {
     line-height: 5.9375rem;
     font-weight: bold;
   }
-  /* line 38, D:/Non-client/frontend/assets/scss/elements/_headings.scss */
+  /* line 38, D:/Non-client/frontend/src/scss/elements/_headings.scss */
   .heading--large {
     font-size: 60px;
     font-size: 3.75rem;
@@ -1312,63 +1312,63 @@ fieldset {
   }
 }
 
-/* line 3, D:/Non-client/frontend/assets/scss/elements/_icons.scss */
+/* line 3, D:/Non-client/frontend/src/scss/elements/_icons.scss */
 .icon--arrow {
   width: 16px;
   height: 10px;
   fill: #007398;
 }
 
-/* line 9, D:/Non-client/frontend/assets/scss/elements/_icons.scss */
+/* line 9, D:/Non-client/frontend/src/scss/elements/_icons.scss */
 .icon--tick {
   width: 12px;
   height: 10px;
 }
 
-/* line 14, D:/Non-client/frontend/assets/scss/elements/_icons.scss */
+/* line 14, D:/Non-client/frontend/src/scss/elements/_icons.scss */
 .icon--cross {
   width: 10px;
   height: 10px;
 }
 
-/* line 19, D:/Non-client/frontend/assets/scss/elements/_icons.scss */
+/* line 19, D:/Non-client/frontend/src/scss/elements/_icons.scss */
 .icon--copy {
   width: 16px;
   height: 18px;
 }
 
-/* line 24, D:/Non-client/frontend/assets/scss/elements/_icons.scss */
+/* line 24, D:/Non-client/frontend/src/scss/elements/_icons.scss */
 .icon--desktop {
   width: 27px;
   height: 25px;
 }
 
-/* line 29, D:/Non-client/frontend/assets/scss/elements/_icons.scss */
+/* line 29, D:/Non-client/frontend/src/scss/elements/_icons.scss */
 .icon--mobile {
   width: 12px;
   height: 25px;
 }
 
-/* line 34, D:/Non-client/frontend/assets/scss/elements/_icons.scss */
+/* line 34, D:/Non-client/frontend/src/scss/elements/_icons.scss */
 .icon--site-logo {
   width: 120px;
   height: 37px;
 }
 
 @media all and (max-width: 46.24em) {
-  /* line 34, D:/Non-client/frontend/assets/scss/elements/_icons.scss */
+  /* line 34, D:/Non-client/frontend/src/scss/elements/_icons.scss */
   .icon--site-logo {
     width: 98px;
     height: 30px;
   }
 }
 
-/* line 4, D:/Non-client/frontend/assets/scss/elements/_images.scss */
+/* line 4, D:/Non-client/frontend/src/scss/elements/_images.scss */
 img {
   max-width: 100%;
 }
 
-/* line 1, D:/Non-client/frontend/assets/scss/elements/_links.scss */
+/* line 1, D:/Non-client/frontend/src/scss/elements/_links.scss */
 a {
   color: #506600;
   text-decoration: underline;
@@ -1376,30 +1376,30 @@ a {
           transition: all 0.3s ease-in-out;
 }
 
-/* line 6, D:/Non-client/frontend/assets/scss/elements/_links.scss */
+/* line 6, D:/Non-client/frontend/src/scss/elements/_links.scss */
 a:hover {
   color: #506600;
 }
 
-/* line 3, D:/Non-client/frontend/assets/scss/elements/_lists.scss */
+/* line 3, D:/Non-client/frontend/src/scss/elements/_lists.scss */
 ul, ol {
   padding-left: 20px;
 }
 
-/* line 9, D:/Non-client/frontend/assets/scss/elements/_lists.scss */
+/* line 9, D:/Non-client/frontend/src/scss/elements/_lists.scss */
 .list--reset {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 13, D:/Non-client/frontend/assets/scss/elements/_lists.scss */
+/* line 13, D:/Non-client/frontend/src/scss/elements/_lists.scss */
 .list--reset li {
   margin: 0;
   padding: 0;
 }
 
-/* line 2, D:/Non-client/frontend/assets/scss/base/mixins/_clearfix.scss */
+/* line 2, D:/Non-client/frontend/src/scss/base/mixins/_clearfix.scss */
 .list--inline:after {
   content: "";
   display: table;
@@ -1407,18 +1407,18 @@ ul, ol {
 }
 
 @media all and (min-width: 46.25em) {
-  /* line 23, D:/Non-client/frontend/assets/scss/elements/_lists.scss */
+  /* line 23, D:/Non-client/frontend/src/scss/elements/_lists.scss */
   .list--inline li {
     float: left;
   }
 }
 
-/* line 2, D:/Non-client/frontend/assets/scss/elements/_paragraphs.scss */
+/* line 2, D:/Non-client/frontend/src/scss/elements/_paragraphs.scss */
 p {
   margin-bottom: 20px;
 }
 
-/* line 1, D:/Non-client/frontend/assets/scss/elements/_screen-readers.scss */
+/* line 1, D:/Non-client/frontend/src/scss/elements/_screen-readers.scss */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1430,7 +1430,7 @@ p {
   border: 0;
 }
 
-/* line 11, D:/Non-client/frontend/assets/scss/elements/_screen-readers.scss */
+/* line 11, D:/Non-client/frontend/src/scss/elements/_screen-readers.scss */
 .sr-only-focusable:active, .sr-only-focusable:focus {
   position: static;
   width: auto;
@@ -1440,7 +1440,7 @@ p {
   clip: auto;
 }
 
-/* line 2, D:/Non-client/frontend/assets/scss/elements/_tables.scss */
+/* line 2, D:/Non-client/frontend/src/scss/elements/_tables.scss */
 .table {
   margin-top: 36px;
   margin-bottom: 36px;
@@ -1449,7 +1449,7 @@ p {
   border: 1px solid #ccc;
 }
 
-/* line 9, D:/Non-client/frontend/assets/scss/elements/_tables.scss */
+/* line 9, D:/Non-client/frontend/src/scss/elements/_tables.scss */
 .table th, .table td {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1457,7 +1457,7 @@ p {
   padding-right: 20px;
 }
 
-/* line 16, D:/Non-client/frontend/assets/scss/elements/_tables.scss */
+/* line 16, D:/Non-client/frontend/src/scss/elements/_tables.scss */
 .table th {
   background: #eee;
   font-weight: bold;
@@ -1467,23 +1467,23 @@ p {
   border: 1px solid #ccc;
 }
 
-/* line 26, D:/Non-client/frontend/assets/scss/elements/_tables.scss */
+/* line 26, D:/Non-client/frontend/src/scss/elements/_tables.scss */
 .table tr:first-child td, .table tr:first-child th {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-/* line 32, D:/Non-client/frontend/assets/scss/elements/_tables.scss */
+/* line 32, D:/Non-client/frontend/src/scss/elements/_tables.scss */
 .table tr:last-child td {
   border-bottom: 0;
 }
 
-/* line 36, D:/Non-client/frontend/assets/scss/elements/_tables.scss */
+/* line 36, D:/Non-client/frontend/src/scss/elements/_tables.scss */
 .table td {
   border-bottom: 1px solid #ccc;
 }
 
-/* line 5, D:/Non-client/frontend/assets/scss/elements/_type.scss */
+/* line 5, D:/Non-client/frontend/src/scss/elements/_type.scss */
 body {
   font-family: "Roboto";
   font-size: 16px;

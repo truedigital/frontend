@@ -41,7 +41,7 @@ require('./gulp/tasks/modernizr')(gulp, plugins, browserSync);
 
 gulp.task('default', function () {
     // gulp.start('styles', 'scripts', 'templates');
-    runSequence('json-sass', ['styles', 'scripts', 'styleguide-scripts'], 'templates');
+    runSequence('json-sass', ['styles', 'scripts', 'styleguide-scripts', 'images'], 'templates');
 });
 
 gulp.task('build' , function () {

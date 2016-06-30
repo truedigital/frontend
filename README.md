@@ -150,6 +150,7 @@ The best place to start is styles.scss. You can see what files are included, the
   - `modernizr-custom.js` : Generated using the build command. Contents of this file is dependant on the code that you write for your project.
 
 #### Image Optimisation
+
 Image optimisation through [kraken.io](http://kraken.io) is supported once `config.kraken` is populated with valid premium credentials. Images are only copied/reoptimised when modified.
 
 ```
