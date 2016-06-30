@@ -1,6 +1,6 @@
 {
   "name": "TrueFrontend",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Frontend build system maintained by the front end team at True Digital",
   "private": true,
   "scripts": {
