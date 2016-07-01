@@ -6,6 +6,7 @@ node_modules/
 
 # Generated Files
 src/html/*
+dist/fonts/*
 dist/js/*.js
 dist/js/*.min.js
 dist/css/*.css
