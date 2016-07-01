@@ -29,6 +29,7 @@ var plugins = require("gulp-load-plugins")({
 require('./gulp/tasks/json-sass')(gulp, gutil, plugins, jsonSass, fs, source);
 require('./gulp/tasks/styles')(gulp, gutil, plugins, browserSync, jsonSass, source);
 require('./gulp/tasks/images')(gulp, plugins, browserSync);
+require('./gulp/tasks/fonts')(gulp, plugins, browserSync);
 require('./gulp/tasks/scripts')(gulp, gutil, plugins, browserSync);
 require('./gulp/tasks/styleguide')(gulp, gutil, plugins, browserSync);
 require('./gulp/tasks/templates')(gulp, gutil, plugins, browserSync, assemble);
@@ -41,7 +42,7 @@ require('./gulp/tasks/modernizr')(gulp, plugins, browserSync);
 
 gulp.task('default', function () {
     // gulp.start('styles', 'scripts', 'templates');
-    runSequence('json-sass', ['styles', 'scripts', 'styleguide-scripts', 'images'], 'templates');
+    runSequence('json-sass', ['styles', 'scripts', 'styleguide-scripts', 'images', 'fonts'], 'templates');
 });
 
 gulp.task('build' , function () {
@@ -57,6 +58,7 @@ gulp.task('watch-templates', ['default', 'browser-sync-templates'], function () 
 });
 
 function watchFiles(){
+    gulp.watch(path.to.fonts.source, ['fonts']);
     gulp.watch(path.to.scss.files, ['styles']);
     gulp.watch(path.to.json.files, ['json-sass']);
     gulp.watch(path.to.js.partials, ['scripts']);
