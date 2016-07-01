@@ -15,7 +15,8 @@ module.exports =
         dist: {
             css: path.join(_distDir, '/css'),
             js: path.join(_distDir, '/js'),
-            images: path.join(_distDir, '/images')
+            images: path.join(_distDir, '/images'),
+            fonts: path.join(_distDir, '/fonts')
         },
 
         images: {
@@ -54,6 +55,10 @@ module.exports =
             layouts: path.join(_baseDir, '/templates/views/layouts'),
             layoutIncludes: path.join(_baseDir, '/templates/views/layouts/includes'),
             dest: path.join(_baseDir, '/html'),
+        },
+
+        fonts: {
+            source: path.join(_baseDir, '/fonts/**/*')
         },
 
         svg: {
